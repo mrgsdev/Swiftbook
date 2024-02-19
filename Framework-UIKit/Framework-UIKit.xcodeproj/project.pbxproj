@@ -20,6 +20,7 @@
 		42705CE72B83805100DE98A1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CE62B83805100DE98A1 /* CollectionViewCell.swift */; };
 		42705CE92B83823900DE98A1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CE82B83823900DE98A1 /* CollectionViewController.swift */; };
 		42705CEB2B839DBB00DE98A1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CEA2B839DBB00DE98A1 /* WebViewController.swift */; };
+		42705CED2B83A51A00DE98A1 /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CEC2B83A51A00DE98A1 /* GestureRecognizerViewController.swift */; };
 		4297135B2B833F6B00B66FC3 /* LessonTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297135A2B833F6B00B66FC3 /* LessonTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		42705CE62B83805100DE98A1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		42705CE82B83823900DE98A1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		42705CEA2B839DBB00DE98A1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		42705CEC2B83A51A00DE98A1 /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		4297135A2B833F6B00B66FC3 /* LessonTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				42705CE22B837C1D00DE98A1 /* TrackViewController.swift */,
 				42705CE02B83784500DE98A1 /* TrackListTVC.swift */,
 				4268EF6B2B832FE3008D16F2 /* Main.storyboard */,
+				42705CEC2B83A51A00DE98A1 /* GestureRecognizerViewController.swift */,
 				42705CEA2B839DBB00DE98A1 /* WebViewController.swift */,
 				42705CE42B837FCC00DE98A1 /* PreviewPageCollectionViewController.swift */,
 				42705CE62B83805100DE98A1 /* CollectionViewCell.swift */,
@@ -172,6 +175,7 @@
 				42705CE12B83784500DE98A1 /* TrackListTVC.swift in Sources */,
 				4268EF662B832FE3008D16F2 /* AppDelegate.swift in Sources */,
 				42705CE52B837FCC00DE98A1 /* PreviewPageCollectionViewController.swift in Sources */,
+				42705CED2B83A51A00DE98A1 /* GestureRecognizerViewController.swift in Sources */,
 				4268EF682B832FE3008D16F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -111,6 +111,7 @@
                         <segue destination="7lN-Lj-FTd" kind="relationship" relationship="viewControllers" id="fAj-pq-UDE"/>
                         <segue destination="RZr-0y-G9b" kind="relationship" relationship="viewControllers" id="Aq0-dy-pqV"/>
                         <segue destination="kKg-Rv-96X" kind="relationship" relationship="viewControllers" id="qFj-mu-Mj3"/>
+                        <segue destination="LdT-kz-2K6" kind="relationship" relationship="viewControllers" id="Gc8-gN-Ofs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvA-hv-qAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -811,6 +812,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kr5-Rd-mol" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="-346"/>
+        </scene>
+        <!--First VC-->
+        <scene sceneID="DBY-bU-ifv">
+            <objects>
+                <viewController id="LdT-kz-2K6" customClass="GestureRecognizerViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qlb-0i-jjr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gester Recognizer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UX-Yt-tSK">
+                                <rect key="frame" x="58" y="190" width="276" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <color key="textColor" red="0.59577252540000003" green="0.1655048844" blue="0.1867137499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xq1-rI-0tT"/>
+                        <color key="backgroundColor" red="0.76269071509999997" green="0.90356855729999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xq1-rI-0tT" firstAttribute="trailing" secondItem="3UX-Yt-tSK" secondAttribute="trailing" constant="59" id="Zi5-98-Ruh"/>
+                            <constraint firstItem="3UX-Yt-tSK" firstAttribute="top" secondItem="Xq1-rI-0tT" secondAttribute="top" constant="131" id="o2x-uF-h1d"/>
+                            <constraint firstItem="3UX-Yt-tSK" firstAttribute="leading" secondItem="Xq1-rI-0tT" secondAttribute="leading" constant="58" id="v5S-Ps-mKD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UIGestureRecognizer" id="TiE-ZD-pwj"/>
+                    <navigationItem key="navigationItem" title="First VC" id="u8V-GV-mz3"/>
+                    <connections>
+                        <outlet property="label" destination="3UX-Yt-tSK" id="gIt-8A-dMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnK-UW-VEF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2163" y="799"/>
         </scene>
     </scenes>
     <resources>
