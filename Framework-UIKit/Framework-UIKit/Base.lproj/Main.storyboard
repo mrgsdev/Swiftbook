@@ -144,6 +144,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cCZ-Dm-qxu">
+                                <rect key="frame" x="16" y="239.33333333333337" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-zj-mps">
+                                <rect key="frame" x="164.33333333333334" y="293.33333333333331" width="64.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="Xe8-SY-lTx" eventType="touchUpInside" id="4QL-qn-59C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RRJ-WN-h64"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -152,10 +165,15 @@
                             <constraint firstItem="YUR-5p-JTG" firstAttribute="centerX" secondItem="Lsb-o9-kro" secondAttribute="centerX" id="ESx-G7-5nT"/>
                             <constraint firstItem="yXA-hE-kM5" firstAttribute="top" secondItem="RRJ-WN-h64" secondAttribute="top" constant="10" id="Liu-Ox-FPh"/>
                             <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="yXA-hE-kM5" secondAttribute="trailing" constant="10" id="MEq-xN-qDy"/>
+                            <constraint firstItem="gZZ-zj-mps" firstAttribute="centerX" secondItem="Lsb-o9-kro" secondAttribute="centerX" id="Qvv-cH-0kW"/>
                             <constraint firstItem="YUR-5p-JTG" firstAttribute="top" secondItem="yXA-hE-kM5" secondAttribute="bottom" constant="20" id="Umn-fZ-oHh"/>
+                            <constraint firstItem="cCZ-Dm-qxu" firstAttribute="top" secondItem="kna-5e-ojn" secondAttribute="bottom" constant="20" id="Xx8-pG-3DF"/>
                             <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="kna-5e-ojn" secondAttribute="trailing" constant="16" id="Zh4-kz-yrY"/>
                             <constraint firstItem="kna-5e-ojn" firstAttribute="leading" secondItem="RRJ-WN-h64" secondAttribute="leading" constant="16" id="csv-Or-oQM"/>
+                            <constraint firstItem="cCZ-Dm-qxu" firstAttribute="leading" secondItem="RRJ-WN-h64" secondAttribute="leading" constant="16" id="dxf-NG-mz8"/>
+                            <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="cCZ-Dm-qxu" secondAttribute="trailing" constant="16" id="nsw-V6-FmR"/>
                             <constraint firstItem="kna-5e-ojn" firstAttribute="top" secondItem="YUR-5p-JTG" secondAttribute="bottom" constant="40" id="qDG-BS-CDR"/>
+                            <constraint firstItem="gZZ-zj-mps" firstAttribute="top" secondItem="cCZ-Dm-qxu" secondAttribute="bottom" constant="20" id="rbL-6y-obK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SegmentControl" id="VDc-1k-Vm0"/>
@@ -163,6 +181,7 @@
                         <outlet property="label" destination="YUR-5p-JTG" id="ibe-e1-Vrb"/>
                         <outlet property="segmentedControl" destination="yXA-hE-kM5" id="Unn-ST-4Yv"/>
                         <outlet property="slider" destination="kna-5e-ojn" id="EFG-BD-a7x"/>
+                        <outlet property="textField" destination="cCZ-Dm-qxu" id="oXm-dm-Hjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANE-Ul-IUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

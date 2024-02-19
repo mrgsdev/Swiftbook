@@ -8,20 +8,21 @@
 import UIKit
 
 class LessonTwoViewController: UIViewController {
-
+    
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         slider.minimumValue = 0
         slider.maximumValue = 1
         slider.value = 50
         slider.minimumTrackTintColor = .black
         slider.maximumTrackTintColor = .red
         slider.thumbTintColor = .blue
-//        label.isHidden = !label.isHidden
+        //        label.isHidden = !label.isHidden
         label.text = String(Int(slider.value))
         label.font = label.font.withSize(35)
         label.textAlignment = .center
@@ -32,10 +33,28 @@ class LessonTwoViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func donePressed(_ sender: UIButton) {
+        guard let text = textField.text, !text.isEmpty else {
+            let alertController = UIAlertController(title: "Ошибка", message: "", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            showAlertWithTextField(title: "Ошибка", message: "Текстовое поле пустое")
+            return
+        }
+        if let _ = Double(text) {
+            showAlertWithTextField(title: "Ошибка", message: "Введите имя")
+        } else{
+            label.text = text
+            textField.text = nil
+        }
+    }
+    
     @IBAction func sliderAction(_ sender: UISlider) {
         label.text = String(Int(sender.value))
         
- 
+        
         self.view.backgroundColor = self.view.backgroundColor!.withAlphaComponent(CGFloat(sender.value))
         
     }
@@ -56,15 +75,35 @@ class LessonTwoViewController: UIViewController {
         }
     }
     
-
+    private func showAlertWithTextField(title: String, message: String) {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            alertController.addTextField { (textField) in
+                textField.placeholder = "Введите данные"
+            }
+            
+            let confirmAction = UIAlertAction(title: "OK", style: .default) { (_) in
+                if let textField = alertController.textFields?.first, let text = textField.text, !text.isEmpty {
+                    self.label.text = text
+                    self.textField.text = nil
+                }
+            }
+            
+            let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+            
+            alertController.addAction(confirmAction)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
