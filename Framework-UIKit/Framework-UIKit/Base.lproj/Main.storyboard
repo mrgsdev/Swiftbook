@@ -132,6 +132,12 @@
                                     <action selector="choiceSegment:" destination="Xe8-SY-lTx" eventType="valueChanged" id="aGh-4Z-gD6"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kna-5e-ojn">
+                                <rect key="frame" x="14" y="189.33333333333334" width="365" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="Xe8-SY-lTx" eventType="valueChanged" id="xrV-2J-0Zm"/>
+                                </connections>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUR-5p-JTG">
                                 <rect key="frame" x="176" y="129" width="41.333333333333343" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -147,12 +153,16 @@
                             <constraint firstItem="yXA-hE-kM5" firstAttribute="top" secondItem="RRJ-WN-h64" secondAttribute="top" constant="10" id="Liu-Ox-FPh"/>
                             <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="yXA-hE-kM5" secondAttribute="trailing" constant="10" id="MEq-xN-qDy"/>
                             <constraint firstItem="YUR-5p-JTG" firstAttribute="top" secondItem="yXA-hE-kM5" secondAttribute="bottom" constant="20" id="Umn-fZ-oHh"/>
+                            <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="kna-5e-ojn" secondAttribute="trailing" constant="16" id="Zh4-kz-yrY"/>
+                            <constraint firstItem="kna-5e-ojn" firstAttribute="leading" secondItem="RRJ-WN-h64" secondAttribute="leading" constant="16" id="csv-Or-oQM"/>
+                            <constraint firstItem="kna-5e-ojn" firstAttribute="top" secondItem="YUR-5p-JTG" secondAttribute="bottom" constant="40" id="qDG-BS-CDR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SegmentControl" id="VDc-1k-Vm0"/>
                     <connections>
                         <outlet property="label" destination="YUR-5p-JTG" id="ibe-e1-Vrb"/>
                         <outlet property="segmentedControl" destination="yXA-hE-kM5" id="Unn-ST-4Yv"/>
+                        <outlet property="slider" destination="kna-5e-ojn" id="EFG-BD-a7x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANE-Ul-IUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
