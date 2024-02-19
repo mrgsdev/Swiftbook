@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UIButton & UILabel-->
+        <!--UIKit pt.1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LessonOneViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jg7-1W-5dD" secondAttribute="trailing" constant="50" id="rJv-vs-rJo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="UIButton &amp; UILabel" id="aa0-jO-qoz"/>
+                    <tabBarItem key="tabBarItem" title="UIKit pt.1" image="m1.button.horizontal" catalog="system" id="aa0-jO-qoz"/>
                     <connections>
                         <outlet property="buttonClear" destination="ovU-71-ZOg" id="msu-27-bzZ"/>
                         <outlet property="label" destination="4u8-p6-fYd" id="QAN-Ex-Wim"/>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="-200"/>
+            <point key="canvasLocation" x="845" y="-399"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GFc-P8-Zis">
@@ -100,18 +100,96 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XdL-Nm-Hwk"/>
                         <segue destination="Xe8-SY-lTx" kind="relationship" relationship="viewControllers" id="mQe-3F-4qX"/>
                         <segue destination="U7Z-j6-P5p" kind="relationship" relationship="viewControllers" id="mxt-3f-Fb9"/>
+                        <segue destination="h5S-Xb-Cau" kind="relationship" relationship="viewControllers" id="WpO-3Q-4si"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvA-hv-qAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
-        <!--Item-->
+        <!--Track ListTVC-->
+        <scene sceneID="5Bn-Xd-sg0">
+            <objects>
+                <tableViewController id="zbH-a2-nWr" customClass="TrackListTVC" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="khj-Sv-c7v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" id="bpH-Tq-w7W">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bpH-Tq-w7W" id="0CT-XP-eb8">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="NxZ-wN-v9O" kind="show" identifier="showTrack" id="gKR-2O-uZT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zbH-a2-nWr" id="pqi-VA-mDg"/>
+                            <outlet property="delegate" destination="zbH-a2-nWr" id="1IP-Vq-ICf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Qwv-hQ-7gs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dw3-rh-0yX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="1513"/>
+        </scene>
+        <!--Track View Controller-->
+        <scene sceneID="0Nu-a0-85R">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="NxZ-wN-v9O" customClass="TrackViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8zC-38-0rW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The Beatles - Help!" translatesAutoresizingMaskIntoConstraints="NO" id="ZYh-16-9zi">
+                                <rect key="frame" x="0.0" y="103" width="393" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="hhm-Y8-tPU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM5-TW-rAi">
+                                <rect key="frame" x="16" y="478" width="361" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VtM-25-EnQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZYh-16-9zi" firstAttribute="top" secondItem="VtM-25-EnQ" secondAttribute="top" id="2C0-mL-BA6"/>
+                            <constraint firstItem="ZYh-16-9zi" firstAttribute="leading" secondItem="VtM-25-EnQ" secondAttribute="leading" id="MpW-hZ-WUd"/>
+                            <constraint firstItem="wM5-TW-rAi" firstAttribute="leading" secondItem="VtM-25-EnQ" secondAttribute="leading" constant="16" id="U3g-rM-fQd"/>
+                            <constraint firstItem="wM5-TW-rAi" firstAttribute="top" secondItem="ZYh-16-9zi" secondAttribute="bottom" constant="8" symbolic="YES" id="UoA-S8-hGa"/>
+                            <constraint firstItem="VtM-25-EnQ" firstAttribute="trailing" secondItem="wM5-TW-rAi" secondAttribute="trailing" constant="16" id="lXt-nV-YjY"/>
+                            <constraint firstItem="ZYh-16-9zi" firstAttribute="trailing" secondItem="VtM-25-EnQ" secondAttribute="trailing" id="rmC-rm-TqU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UaM-bM-0BS"/>
+                    <connections>
+                        <outlet property="image" destination="ZYh-16-9zi" id="tei-R6-4y9"/>
+                        <outlet property="titleLabel" destination="wM5-TW-rAi" id="wnS-Oq-c9t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLv-gH-gW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="1513"/>
+        </scene>
+        <!--UIKit pt.3-->
         <scene sceneID="yR7-zD-Pac">
             <objects>
                 <viewController id="U7Z-j6-P5p" customClass="LessonThirdViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,7 +244,7 @@
                             <constraint firstItem="5jF-RQ-cHD" firstAttribute="top" secondItem="PgM-5a-HJx" secondAttribute="bottom" constant="10" id="n7w-qw-gw6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="LYF-DM-OW4"/>
+                    <tabBarItem key="tabBarItem" title="UIKit pt.3" image="m3.button.horizontal" catalog="system" id="LYF-DM-OW4"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ir7-hF-b0F" id="ePp-DE-xqv"/>
                         <outlet property="countLabel" destination="chW-eM-W9F" id="xfB-kk-O1s"/>
@@ -177,9 +255,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2r-i1-WhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.824427480916029" y="798.59154929577471"/>
+            <point key="canvasLocation" x="737" y="799"/>
         </scene>
-        <!--SegmentControl-->
+        <!--UIKit pt.2-->
         <scene sceneID="jVc-xI-iRu">
             <objects>
                 <viewController id="Xe8-SY-lTx" customClass="LessonTwoViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +310,7 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="b5O-Gd-dO4">
-                                        <rect key="frame" x="47" y="359" width="320" height="216"/>
+                                        <rect key="frame" x="46.666666666666657" y="358.66666666666669" width="320" height="216.00000000000006"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="473288400">
                                             <!--2015-12-31 21:00:00 +0000-->
                                         </date>
@@ -290,7 +368,7 @@
                             <constraint firstItem="Sje-co-KsA" firstAttribute="centerX" secondItem="Lsb-o9-kro" secondAttribute="centerX" id="pKp-wK-ar6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SegmentControl" id="VDc-1k-Vm0"/>
+                    <tabBarItem key="tabBarItem" title="UIKit pt.2" image="m2.button.horizontal" catalog="system" id="VDc-1k-Vm0"/>
                     <size key="freeformSize" width="393" height="1500"/>
                     <connections>
                         <outlet property="datePicker" destination="b5O-Gd-dO4" id="je9-nd-DYe"/>
@@ -304,10 +382,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANE-Ul-IUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="751"/>
+            <point key="canvasLocation" x="1631" y="27"/>
+        </scene>
+        <!--UITableView-->
+        <scene sceneID="aN1-7w-H0Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h5S-Xb-Cau" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UITableView" image="tablecells" catalog="system" id="ddv-NA-Ig2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X1T-pw-tf5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zbH-a2-nWr" kind="relationship" relationship="rootViewController" id="Z8m-vW-8YC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nah-Ff-7j3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="799"/>
         </scene>
     </scenes>
     <resources>
+        <image name="The Beatles - Help!" width="1000" height="1000"/>
+        <image name="m1.button.horizontal" catalog="system" width="128" height="91"/>
+        <image name="m2.button.horizontal" catalog="system" width="128" height="91"/>
+        <image name="m3.button.horizontal" catalog="system" width="128" height="91"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

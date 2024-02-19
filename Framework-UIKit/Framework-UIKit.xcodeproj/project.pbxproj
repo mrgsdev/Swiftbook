@@ -14,6 +14,8 @@
 		4268EF6F2B832FE4008D16F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4268EF6E2B832FE4008D16F2 /* Assets.xcassets */; };
 		4268EF722B832FE4008D16F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4268EF702B832FE4008D16F2 /* LaunchScreen.storyboard */; };
 		42705CDF2B83671C00DE98A1 /* LessonThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CDE2B83671C00DE98A1 /* LessonThirdViewController.swift */; };
+		42705CE12B83784500DE98A1 /* TrackListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CE02B83784500DE98A1 /* TrackListTVC.swift */; };
+		42705CE32B837C1D00DE98A1 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42705CE22B837C1D00DE98A1 /* TrackViewController.swift */; };
 		4297135B2B833F6B00B66FC3 /* LessonTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297135A2B833F6B00B66FC3 /* LessonTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		4268EF712B832FE4008D16F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4268EF732B832FE4008D16F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42705CDE2B83671C00DE98A1 /* LessonThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonThirdViewController.swift; sourceTree = "<group>"; };
+		42705CE02B83784500DE98A1 /* TrackListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTVC.swift; sourceTree = "<group>"; };
+		42705CE22B837C1D00DE98A1 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		4297135A2B833F6B00B66FC3 /* LessonTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,8 +68,10 @@
 				4268EF672B832FE3008D16F2 /* SceneDelegate.swift */,
 				4268EF692B832FE3008D16F2 /* LessonOneViewController.swift */,
 				4297135A2B833F6B00B66FC3 /* LessonTwoViewController.swift */,
-				4268EF6B2B832FE3008D16F2 /* Main.storyboard */,
 				42705CDE2B83671C00DE98A1 /* LessonThirdViewController.swift */,
+				42705CE22B837C1D00DE98A1 /* TrackViewController.swift */,
+				42705CE02B83784500DE98A1 /* TrackListTVC.swift */,
+				4268EF6B2B832FE3008D16F2 /* Main.storyboard */,
 				4268EF6E2B832FE4008D16F2 /* Assets.xcassets */,
 				4268EF702B832FE4008D16F2 /* LaunchScreen.storyboard */,
 				4268EF732B832FE4008D16F2 /* Info.plist */,
@@ -146,7 +152,9 @@
 			files = (
 				4268EF6A2B832FE3008D16F2 /* LessonOneViewController.swift in Sources */,
 				4297135B2B833F6B00B66FC3 /* LessonTwoViewController.swift in Sources */,
+				42705CE32B837C1D00DE98A1 /* TrackViewController.swift in Sources */,
 				42705CDF2B83671C00DE98A1 /* LessonThirdViewController.swift in Sources */,
+				42705CE12B83784500DE98A1 /* TrackListTVC.swift in Sources */,
 				4268EF662B832FE3008D16F2 /* AppDelegate.swift in Sources */,
 				4268EF682B832FE3008D16F2 /* SceneDelegate.swift in Sources */,
 			);
