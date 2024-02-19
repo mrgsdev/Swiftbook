@@ -8,6 +8,10 @@
 import UIKit
 
 class LessonTwoViewController: UIViewController {
+   
+    
+    @IBOutlet weak var switches: UISwitch!
+  
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var slider: UISlider!
@@ -30,12 +34,25 @@ class LessonTwoViewController: UIViewController {
         label.numberOfLines = 0
         
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: true)
-        
+        switches.isOn = !switches.isOn
+        switches.onTintColor = .black
+        switches.tintColor = .black
         
         
     }
     
     
+    @IBAction func switchAction(_ sender: UISwitch) {
+        
+        if switches.isOn {
+            view.backgroundColor = .gray
+        } else {
+            view.backgroundColor = .green
+        }
+        
+        
+        
+    }
     @IBAction func donePressed(_ sender: UIButton) {
         guard let text = textField.text, !text.isEmpty else {
             let alertController = UIAlertController(title: "Ошибка", message: "", preferredStyle: .alert)
