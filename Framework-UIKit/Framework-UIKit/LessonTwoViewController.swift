@@ -11,6 +11,7 @@ class LessonTwoViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     override func viewDidLoad() {
@@ -26,7 +27,7 @@ class LessonTwoViewController: UIViewController {
         label.text = String(Int(slider.value))
         label.font = label.font.withSize(35)
         label.textAlignment = .center
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: true)
         
@@ -75,6 +76,15 @@ class LessonTwoViewController: UIViewController {
         }
     }
     
+    @IBAction func datePickerAction(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        let dateValue = dateFormatter.string(from: sender.date)
+        
+        
+        
+        label.text = dateValue
+    }
     private func showAlertWithTextField(title: String, message: String) {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             
