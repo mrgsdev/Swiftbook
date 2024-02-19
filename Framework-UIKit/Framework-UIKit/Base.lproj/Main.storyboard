@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dlo-zz-uwI">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--UIButton & UILabel-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LessonOneViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jg7-1W-5dD">
-                                <rect key="frame" x="50" y="559.66666666666663" width="293" height="158.33333333333337"/>
+                                <rect key="frame" x="50" y="510.66666666666669" width="293" height="158.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-Cp-2Vd">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
@@ -40,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MB2-br-HDr">
-                                        <rect key="frame" x="0.0" y="62" width="293" height="50"/>
+                                        <rect key="frame" x="0.0" y="61.999999999999943" width="293" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a1I-K6-QN0">
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-71-ZOg">
-                                        <rect key="frame" x="0.0" y="123.99999999999999" width="293" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="123.99999999999993" width="293" height="34.333333333333329"/>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Clear"/>
@@ -78,6 +78,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jg7-1W-5dD" secondAttribute="trailing" constant="50" id="rJv-vs-rJo"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="UIButton &amp; UILabel" id="aa0-jO-qoz"/>
                     <connections>
                         <outlet property="buttonClear" destination="ovU-71-ZOg" id="msu-27-bzZ"/>
                         <outlet property="label" destination="4u8-p6-fYd" id="QAN-Ex-Wim"/>
@@ -87,15 +88,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="889" y="-200"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GFc-P8-Zis">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dlo-zz-uwI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P9O-Yg-hGN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XdL-Nm-Hwk"/>
+                        <segue destination="Xe8-SY-lTx" kind="relationship" relationship="viewControllers" id="mQe-3F-4qX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvA-hv-qAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+        <!--SegmentControl-->
+        <scene sceneID="jVc-xI-iRu">
+            <objects>
+                <viewController id="Xe8-SY-lTx" customClass="LessonTwoViewController" customModule="Framework_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lsb-o9-kro">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yXA-hE-kM5">
+                                <rect key="frame" x="10" y="69" width="373" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gak-HO-yns"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choiceSegment:" destination="Xe8-SY-lTx" eventType="valueChanged" id="aGh-4Z-gD6"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUR-5p-JTG">
+                                <rect key="frame" x="176" y="129" width="41.333333333333343" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RRJ-WN-h64"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="yXA-hE-kM5" firstAttribute="leading" secondItem="RRJ-WN-h64" secondAttribute="leading" constant="10" id="4aV-hm-cm3"/>
+                            <constraint firstItem="YUR-5p-JTG" firstAttribute="centerX" secondItem="Lsb-o9-kro" secondAttribute="centerX" id="ESx-G7-5nT"/>
+                            <constraint firstItem="yXA-hE-kM5" firstAttribute="top" secondItem="RRJ-WN-h64" secondAttribute="top" constant="10" id="Liu-Ox-FPh"/>
+                            <constraint firstItem="RRJ-WN-h64" firstAttribute="trailing" secondItem="yXA-hE-kM5" secondAttribute="trailing" constant="10" id="MEq-xN-qDy"/>
+                            <constraint firstItem="YUR-5p-JTG" firstAttribute="top" secondItem="yXA-hE-kM5" secondAttribute="bottom" constant="20" id="Umn-fZ-oHh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SegmentControl" id="VDc-1k-Vm0"/>
+                    <connections>
+                        <outlet property="label" destination="YUR-5p-JTG" id="ibe-e1-Vrb"/>
+                        <outlet property="segmentedControl" destination="yXA-hE-kM5" id="Unn-ST-4Yv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANE-Ul-IUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887.78625954198469" y="482.3943661971831"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

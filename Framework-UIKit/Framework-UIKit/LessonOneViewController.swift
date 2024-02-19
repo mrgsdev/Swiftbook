@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LessonOneViewController: UIViewController {
 
   
     @IBOutlet weak var buttonClear: UIButton!
