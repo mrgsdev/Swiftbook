@@ -3,7 +3,7 @@
 //  Framework-UIKit
 //
 //  Created by mrgsdev on 19.02.2024.
-//
+//  UIButton & UILabel
 
 import UIKit
 

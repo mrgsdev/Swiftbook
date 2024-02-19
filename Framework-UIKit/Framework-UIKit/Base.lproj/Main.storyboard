@@ -172,16 +172,16 @@
                                         </connections>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="Zz7-54-Nbp">
-                                        <rect key="frame" x="91.000000000000014" y="617.66666666666663" width="231.33333333333337" height="31"/>
+                                        <rect key="frame" x="34.333333333333343" y="617.66666666666663" width="344.33333333333326" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5h-dI-Oc7">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5h-dI-Oc7">
+                                                <rect key="frame" x="0.0" y="0.0" width="154.33333333333334" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afH-4Q-MdF">
-                                                <rect key="frame" x="182.33333333333331" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="295.33333333333337" y="0.0" width="51" height="31"/>
                                                 <color key="thumbTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="switchAction:" destination="Xe8-SY-lTx" eventType="valueChanged" id="6Q8-Pn-lbr"/>
@@ -225,6 +225,7 @@
                     <size key="freeformSize" width="393" height="1500"/>
                     <connections>
                         <outlet property="datePicker" destination="b5O-Gd-dO4" id="je9-nd-DYe"/>
+                        <outlet property="doneButton" destination="gZZ-zj-mps" id="fgF-a9-NVP"/>
                         <outlet property="label" destination="YUR-5p-JTG" id="ibe-e1-Vrb"/>
                         <outlet property="segmentedControl" destination="yXA-hE-kM5" id="Unn-ST-4Yv"/>
                         <outlet property="slider" destination="kna-5e-ojn" id="EFG-BD-a7x"/>
