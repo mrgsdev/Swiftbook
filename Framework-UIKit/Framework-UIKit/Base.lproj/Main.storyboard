@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5jF-RQ-cHD">
-                                <rect key="frame" x="15" y="130" width="363" height="589"/>
+                                <rect key="frame" x="15" y="127" width="363" height="592"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -133,22 +133,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PgM-5a-HJx">
+                                <rect key="frame" x="149.66666666666666" y="85" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="U7Z-j6-P5p" eventType="valueChanged" id="hzV-6E-Zg4"/>
+                                </connections>
+                            </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ir7-hF-b0F">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-AY-ixy">
+                                <rect key="frame" x="15" y="127" width="363" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U9y-Q3-XBs"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="5jF-RQ-cHD" firstAttribute="top" secondItem="h0y-AY-ixy" secondAttribute="bottom" constant="-4" id="4XD-zq-FPG"/>
                             <constraint firstItem="chW-eM-W9F" firstAttribute="top" secondItem="U9y-Q3-XBs" secondAttribute="top" id="6E6-Hi-euK"/>
+                            <constraint firstItem="h0y-AY-ixy" firstAttribute="centerX" secondItem="5jF-RQ-cHD" secondAttribute="centerX" id="8QT-GH-aS1"/>
                             <constraint firstItem="U9y-Q3-XBs" firstAttribute="trailing" secondItem="5jF-RQ-cHD" secondAttribute="trailing" constant="15" id="A1g-3w-5g9"/>
+                            <constraint firstItem="PgM-5a-HJx" firstAttribute="centerX" secondItem="GT0-oF-JMC" secondAttribute="centerX" id="Ajz-EW-FPN"/>
+                            <constraint firstItem="PgM-5a-HJx" firstAttribute="top" secondItem="chW-eM-W9F" secondAttribute="bottom" constant="5" id="B6W-lg-bIu"/>
+                            <constraint firstItem="ir7-hF-b0F" firstAttribute="centerX" secondItem="GT0-oF-JMC" secondAttribute="centerX" id="CQJ-32-Yw2"/>
                             <constraint firstItem="5jF-RQ-cHD" firstAttribute="leading" secondItem="U9y-Q3-XBs" secondAttribute="leading" constant="15" id="ChU-ru-jbu"/>
                             <constraint firstItem="U9y-Q3-XBs" firstAttribute="bottom" secondItem="5jF-RQ-cHD" secondAttribute="bottom" constant="50" id="EGI-eR-qMt"/>
-                            <constraint firstItem="5jF-RQ-cHD" firstAttribute="top" secondItem="chW-eM-W9F" secondAttribute="bottom" constant="50" id="UEd-BE-d0k"/>
+                            <constraint firstItem="ir7-hF-b0F" firstAttribute="centerY" secondItem="GT0-oF-JMC" secondAttribute="centerY" id="TYp-0U-xml"/>
                             <constraint firstItem="chW-eM-W9F" firstAttribute="leading" secondItem="U9y-Q3-XBs" secondAttribute="leading" id="Y9d-qO-Xqr"/>
+                            <constraint firstItem="h0y-AY-ixy" firstAttribute="trailing" secondItem="5jF-RQ-cHD" secondAttribute="trailing" id="ZDc-Ff-TaE"/>
                             <constraint firstItem="U9y-Q3-XBs" firstAttribute="trailing" secondItem="chW-eM-W9F" secondAttribute="trailing" id="bKE-iq-gUP"/>
+                            <constraint firstItem="h0y-AY-ixy" firstAttribute="leading" secondItem="5jF-RQ-cHD" secondAttribute="leading" id="jQA-wZ-Vhy"/>
+                            <constraint firstItem="5jF-RQ-cHD" firstAttribute="top" secondItem="PgM-5a-HJx" secondAttribute="bottom" constant="10" id="n7w-qw-gw6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LYF-DM-OW4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ir7-hF-b0F" id="ePp-DE-xqv"/>
                         <outlet property="countLabel" destination="chW-eM-W9F" id="xfB-kk-O1s"/>
+                        <outlet property="progressView" destination="h0y-AY-ixy" id="Ns5-6W-ZJE"/>
+                        <outlet property="stepper" destination="PgM-5a-HJx" id="qJJ-ye-ojd"/>
                         <outlet property="textView" destination="5jF-RQ-cHD" id="bhb-sv-6fG"/>
                     </connections>
                 </viewController>
