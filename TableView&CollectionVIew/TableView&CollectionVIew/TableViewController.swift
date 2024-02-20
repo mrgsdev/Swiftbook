@@ -55,14 +55,6 @@ class TableViewController: UITableViewController {
         return .delete //insert +
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-         
-        if editingStyle == .delete {
-            emojis.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         true
     }
@@ -72,5 +64,42 @@ class TableViewController: UITableViewController {
         emojis.insert(moveEmoji, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let doneAction = doneAction(at: indexPath)
+        let heartAction = heartAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [doneAction,heartAction])
+    }
+    func doneAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
+            self.emojis.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            completion(true)
+        }
+        action.backgroundColor = .green
+        action.image = UIImage(named: "Close")
+        return action
+    }
+    
+    func heartAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
+            self.emojis[indexPath.row].isFavourite = !self.emojis[indexPath.row].isFavourite 
+            print(self.emojis)
+            completion(true)
+        }
+        if self.emojis[indexPath.row].isFavourite {
+            action.image = UIImage(named: "HeartFilled")
+            action.backgroundColor = .systemGray
+        } else{
+            action.image = UIImage(named: "Heart")
+            action.backgroundColor = .green
+        }
+       
+         
+        return action
+    }
+    
+    
 }
+
+ 
