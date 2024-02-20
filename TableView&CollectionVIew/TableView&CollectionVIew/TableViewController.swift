@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let emojis = [
+    var emojis = [
         EmojiModel(emoji: "Image 1", name: "Name 1", description: "Description 1", isFavourite: false),
         EmojiModel(emoji: "Image 2", name: "Name 2", description: "Description 2", isFavourite: false),
         EmojiModel(emoji: "Image 3", name: "Name 3", description: "Description 3", isFavourite: false),
@@ -51,6 +51,26 @@ class TableViewController: UITableViewController {
     }
     
     
- 
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete //insert +
+    }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+         
+        if editingStyle == .delete {
+            emojis.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let moveEmoji = emojis.remove(at: sourceIndexPath.row)
+        emojis.insert(moveEmoji, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+
 }
