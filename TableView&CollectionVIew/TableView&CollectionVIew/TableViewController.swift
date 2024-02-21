@@ -10,19 +10,19 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var emojis = [
-        EmojiModel(emoji: "Image 1", name: "Name 1", description: "Description 1", isFavourite: false),
-        EmojiModel(emoji: "Image 2", name: "Name 2", description: "Description 2", isFavourite: false),
-        EmojiModel(emoji: "Image 3", name: "Name 3", description: "Description 3", isFavourite: false),
-        EmojiModel(emoji: "Image 4", name: "Name 4", description: "Description 4", isFavourite: false),
-        EmojiModel(emoji: "Image 5", name: "Name 5", description: "Description 5", isFavourite: false),
-        EmojiModel(emoji: "Image 6", name: "Name 6", description: "Description 6", isFavourite: false),
-        EmojiModel(emoji: "Image 7", name: "Name 7", description: "Description 7", isFavourite: false),
-        EmojiModel(emoji: "Image 8", name: "Name 8", description: "Description 8", isFavourite: false),
-        EmojiModel(emoji: "Image 9", name: "Name 9", description: "Description 9", isFavourite: false),
-        EmojiModel(emoji: "Image 10", name: "Name 10", description: "Description 10", isFavourite: false),
-        EmojiModel(emoji: "Image 11", name: "Name 11", description: "Description 11", isFavourite: false),
-        EmojiModel(emoji: "Image 12", name: "Name 12", description: "Description 12", isFavourite: false),
-        EmojiModel(emoji: "Image 13", name: "Name 13", description: "Description 13", isFavourite: false)
+        EmojiModel(emoji: "🤨", name: "Name 1", description: "Description 1", isFavourite: false),
+        EmojiModel(emoji: "🧐", name: "Name 2", description: "Description 2", isFavourite: false),
+        EmojiModel(emoji: "😎", name: "Name 3", description: "Description 3", isFavourite: false),
+        EmojiModel(emoji: "🫤", name: "Name 4", description: "Description 4", isFavourite: false),
+        EmojiModel(emoji: "🫥", name: "Name 5", description: "Description 5", isFavourite: false),
+        EmojiModel(emoji: "🤔", name: "Name 6", description: "Description 6", isFavourite: false),
+        EmojiModel(emoji: "🤩", name: "Name 7", description: "Description 7", isFavourite: false),
+        EmojiModel(emoji: "😡", name: "Name 8", description: "Description 8", isFavourite: false),
+        EmojiModel(emoji: "🤭", name: "Name 9", description: "Description 9", isFavourite: false),
+        EmojiModel(emoji: "🤓", name: "Name 10", description: "Description 10", isFavourite: false),
+        EmojiModel(emoji: "🤥", name: "Name 11", description: "Description 11", isFavourite: false),
+        EmojiModel(emoji: "😫", name: "Name 12", description: "Description 12", isFavourite: false),
+        EmojiModel(emoji: "😳", name: "Name 13", description: "Description 13", isFavourite: false)
     ]
 
 
