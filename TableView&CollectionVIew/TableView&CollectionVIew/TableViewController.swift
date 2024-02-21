@@ -24,8 +24,8 @@ class TableViewController: UITableViewController {
         EmojiModel(emoji: "😫", name: "Name 12", description: "Description 12", isFavourite: false),
         EmojiModel(emoji: "😳", name: "Name 13", description: "Description 13", isFavourite: false)
     ]
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -34,17 +34,36 @@ class TableViewController: UITableViewController {
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
         guard segue.identifier == "saveSegue" else {return}
-        let sourceVC = segue.source as! NewEmojiTableViewController
+        let sourceVC = segue.source as! NewEmojiTableViewController // source с которого мы переходим /
         let emoji = sourceVC.emoji
         
-        let newIndexPath = IndexPath(row: emojis.count, section: 0)
-        emojis.append(emoji)
-        tableView.insertRows(at: [newIndexPath], with: .fade)
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            emojis[selectedIndexPath.row] = emoji
+            tableView.reloadRows(at:[ selectedIndexPath], with: .fade)
+        } else{
+            
+            let newIndexPath = IndexPath(row: emojis.count, section: 0)
+            
+            emojis.append(emoji)
+            tableView.insertRows(at: [newIndexPath], with: .fade)
+            
+        }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editEmoji" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let emoji = emojis[indexPath.row]
+        let navVC = segue.destination as! UINavigationController
+        let newEmojiVC = navVC.topViewController as! NewEmojiTableViewController
+        newEmojiVC.emoji = emoji
+        newEmojiVC.title = "Edit"
+    }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+        
         return emojis.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,4 +116,4 @@ class TableViewController: UITableViewController {
     
 }
 
- 
+
