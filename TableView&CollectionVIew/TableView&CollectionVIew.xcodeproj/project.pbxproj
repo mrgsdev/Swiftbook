@@ -14,6 +14,7 @@
 		420234222B8481AA005D1624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420234202B8481AA005D1624 /* LaunchScreen.storyboard */; };
 		4202342A2B84827B005D1624 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420234292B84827B005D1624 /* TableViewController.swift */; };
 		4202342C2B848723005D1624 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4202342B2B848723005D1624 /* CustomTableViewCell.swift */; };
+		425423062B85CC95000FEDF6 /* NewEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */; };
 		4255E4992B848C0000FFC065 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4255E4982B848C0000FFC065 /* EmojiModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		420234232B8481AA005D1624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		420234292B84827B005D1624 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4202342B2B848723005D1624 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmojiTableViewController.swift; sourceTree = "<group>"; };
 		4255E4982B848C0000FFC065 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				420234152B8481A9005D1624 /* AppDelegate.swift */,
 				420234172B8481A9005D1624 /* SceneDelegate.swift */,
 				4202341B2B8481A9005D1624 /* Main.storyboard */,
+				425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */,
 				4202342B2B848723005D1624 /* CustomTableViewCell.swift */,
 				420234292B84827B005D1624 /* TableViewController.swift */,
 				4255E4982B848C0000FFC065 /* EmojiModel.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				420234162B8481A9005D1624 /* AppDelegate.swift in Sources */,
+				425423062B85CC95000FEDF6 /* NewEmojiTableViewController.swift in Sources */,
 				4202342C2B848723005D1624 /* CustomTableViewCell.swift in Sources */,
 				4202342A2B84827B005D1624 /* TableViewController.swift in Sources */,
 				4255E4992B848C0000FFC065 /* EmojiModel.swift in Sources */,

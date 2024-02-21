@@ -83,7 +83,7 @@ class TableViewController: UITableViewController {
     
     func heartAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
-            self.emojis[indexPath.row].isFavourite = !self.emojis[indexPath.row].isFavourite 
+            self.emojis[indexPath.row].isFavourite = !self.emojis[indexPath.row].isFavourite
             print(self.emojis)
             completion(true)
         }
