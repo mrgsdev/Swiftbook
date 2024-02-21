@@ -15,6 +15,7 @@
 		4202342C2B848723005D1624 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4202342B2B848723005D1624 /* CustomTableViewCell.swift */; };
 		425423062B85CC95000FEDF6 /* NewEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */; };
 		4255E4992B848C0000FFC065 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4255E4982B848C0000FFC065 /* EmojiModel.swift */; };
+		429379712B85E1EE0095FBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429379702B85E1EE0095FBB5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4202342B2B848723005D1624 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmojiTableViewController.swift; sourceTree = "<group>"; };
 		4255E4982B848C0000FFC065 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
+		429379702B85E1EE0095FBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4255E4982B848C0000FFC065 /* EmojiModel.swift */,
 				420234202B8481AA005D1624 /* LaunchScreen.storyboard */,
 				420234232B8481AA005D1624 /* Info.plist */,
+				429379702B85E1EE0095FBB5 /* Assets.xcassets */,
 			);
 			path = "TableView&CollectionVIew";
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				420234222B8481AA005D1624 /* LaunchScreen.storyboard in Resources */,
+				429379712B85E1EE0095FBB5 /* Assets.xcassets in Resources */,
 				4202341D2B8481A9005D1624 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
