@@ -28,43 +28,42 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.title = "Emoji Reader"
     }
     
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        guard segue.identifier == "saveSegue" else {return}
+        let sourceVC = segue.source as! NewEmojiTableViewController
+        let emoji = sourceVC.emoji
+        
+        let newIndexPath = IndexPath(row: emojis.count, section: 0)
+        emojis.append(emoji)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
+    }
+    
     // MARK: - Table view data source
-    
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         return emojis.count
     }
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! CustomTableViewCell
         let object = emojis[indexPath.row]
         cell.setup(object: object)
         return cell
     }
-    
-    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete //insert +
     }
-    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         true
     }
-    
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let moveEmoji = emojis.remove(at: sourceIndexPath.row)
         emojis.insert(moveEmoji, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-    
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let doneAction = doneAction(at: indexPath)
         let heartAction = heartAction(at: indexPath)
@@ -80,7 +79,6 @@ class TableViewController: UITableViewController {
         action.image = UIImage(named: "Close")
         return action
     }
-    
     func heartAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "") { action, view, completion in
             self.emojis[indexPath.row].isFavourite = !self.emojis[indexPath.row].isFavourite
@@ -94,11 +92,8 @@ class TableViewController: UITableViewController {
             action.image = UIImage(named: "Heart")
             action.backgroundColor = .green
         }
-       
-         
         return action
     }
-    
     
 }
 
