@@ -16,6 +16,7 @@
 		425423062B85CC95000FEDF6 /* NewEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */; };
 		4255E4992B848C0000FFC065 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4255E4982B848C0000FFC065 /* EmojiModel.swift */; };
 		429379712B85E1EE0095FBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429379702B85E1EE0095FBB5 /* Assets.xcassets */; };
+		42AA6EC92B8633470098D531 /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA6EC82B8633470098D531 /* PhotosCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmojiTableViewController.swift; sourceTree = "<group>"; };
 		4255E4982B848C0000FFC065 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		429379702B85E1EE0095FBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42AA6EC82B8633470098D531 /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,43 @@
 		420234142B8481A9005D1624 /* TableView&CollectionVIew */ = {
 			isa = PBXGroup;
 			children = (
-				420234152B8481A9005D1624 /* AppDelegate.swift */,
-				420234172B8481A9005D1624 /* SceneDelegate.swift */,
+				42AA6EC62B86329D0098D531 /* Resource */,
+				42AA6EC52B8632850098D531 /* TableView */,
+				42AA6EC72B8632AA0098D531 /* CollectionView */,
 				4202341B2B8481A9005D1624 /* Main.storyboard */,
+				420234232B8481AA005D1624 /* Info.plist */,
+			);
+			path = "TableView&CollectionVIew";
+			sourceTree = "<group>";
+		};
+		42AA6EC52B8632850098D531 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
 				425423052B85CC95000FEDF6 /* NewEmojiTableViewController.swift */,
 				4202342B2B848723005D1624 /* CustomTableViewCell.swift */,
 				420234292B84827B005D1624 /* TableViewController.swift */,
 				4255E4982B848C0000FFC065 /* EmojiModel.swift */,
-				420234202B8481AA005D1624 /* LaunchScreen.storyboard */,
-				420234232B8481AA005D1624 /* Info.plist */,
-				429379702B85E1EE0095FBB5 /* Assets.xcassets */,
 			);
-			path = "TableView&CollectionVIew";
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		42AA6EC62B86329D0098D531 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				420234152B8481A9005D1624 /* AppDelegate.swift */,
+				420234172B8481A9005D1624 /* SceneDelegate.swift */,
+				429379702B85E1EE0095FBB5 /* Assets.xcassets */,
+				420234202B8481AA005D1624 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		42AA6EC72B8632AA0098D531 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				42AA6EC82B8633470098D531 /* PhotosCollectionView.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +178,7 @@
 				425423062B85CC95000FEDF6 /* NewEmojiTableViewController.swift in Sources */,
 				4202342C2B848723005D1624 /* CustomTableViewCell.swift in Sources */,
 				4202342A2B84827B005D1624 /* TableViewController.swift in Sources */,
+				42AA6EC92B8633470098D531 /* PhotosCollectionView.swift in Sources */,
 				4255E4992B848C0000FFC065 /* EmojiModel.swift in Sources */,
 				420234182B8481A9005D1624 /* SceneDelegate.swift in Sources */,
 			);
