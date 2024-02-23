@@ -28,6 +28,13 @@ class PhotosCollectionView: UICollectionViewController {
         //
         //        collectionView.showsVerticalScrollIndicator = false
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickPhotoSegue" {
+            let photoVC = segue.destination as! SecondViewController
+            let cell = sender as! PhotoCollectionViewCell
+            photoVC.image = cell.dogImageView.image
+        }
+    }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         15
     }
