@@ -19,19 +19,23 @@ class NewPlaceViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            
+            let cameraIcon = UIImage(named: "camera1")
+            let photoIcon = UIImage(named: "photo1")
             let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             
             let camera = UIAlertAction(title: "Camera", style: .default) { _ in
                 // method chooseImagePicker
                 self.chooseImagePicker(source: .camera)
             }
+            camera.setValue(cameraIcon, forKey: "image")
             let photo = UIAlertAction(title: "Photo", style: .default) { _ in
                 // method chooseImagePicker
                 self.chooseImagePicker(source: .photoLibrary)
             }
+            photo.setValue(photoIcon, forKey: "image")
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            actionSheet.addAction(camera)
+                        actionSheet.addAction(camera)
             actionSheet.addAction(photo)
             actionSheet.addAction(cancel)
             
