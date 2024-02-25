@@ -247,6 +247,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="siA-IO-IOs"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageOfPlace" destination="k4n-z7-068" id="iY1-gj-5Vw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5t-kc-T0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Y9M-Ak-4Dw" userLabel="Exit" sceneMemberID="exit"/>
