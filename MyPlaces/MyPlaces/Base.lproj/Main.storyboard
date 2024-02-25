@@ -241,14 +241,22 @@
                     <navigationItem key="navigationItem" title="New Place" id="pUp-n1-pSA">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jjh-iH-Ysk">
                             <connections>
-                                <segue destination="Y9M-Ak-4Dw" kind="unwind" unwindAction="cancelAction:" id="aEo-L4-faD"/>
+                                <action selector="cancelAction:" destination="8Jw-vx-Wfu" id="xMG-5d-EVf"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="siA-IO-IOs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="siA-IO-IOs">
+                            <connections>
+                                <segue destination="Y9M-Ak-4Dw" kind="unwind" unwindAction="undwindSegue:" id="nJE-HF-dae"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="imageOfPlace" destination="k4n-z7-068" id="iY1-gj-5Vw"/>
+                        <outlet property="placeImage" destination="k4n-z7-068" id="iY1-gj-5Vw"/>
+                        <outlet property="placeLocation" destination="gKB-kt-Vtj" id="ANA-d7-Hyu"/>
+                        <outlet property="placeName" destination="fS4-Io-bzd" id="WEh-lQ-YAA"/>
+                        <outlet property="placeType" destination="OeD-BW-Gi1" id="KCl-Ip-QCU"/>
+                        <outlet property="saveButton" destination="siA-IO-IOs" id="nZO-Ry-FCB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5t-kc-T0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

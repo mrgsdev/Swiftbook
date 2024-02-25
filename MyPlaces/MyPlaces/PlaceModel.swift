@@ -5,12 +5,13 @@
 //  Created by mrgsdev on 24.02.2024.
 //
 
-import Foundation
+import UIKit
 
 struct Place{
-    var image:String?
+    var restaurantImage:String?
+    var image:UIImage?
     var name:String
-    var location:String
-    var type:String
+    var location:String?
+    var type:String?
     
 }

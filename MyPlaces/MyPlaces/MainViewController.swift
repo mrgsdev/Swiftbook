@@ -8,22 +8,22 @@
 import UIKit
 
 class MainViewController: UITableViewController {
-    let places = [
-        Place(image: "Burger Heroes", name: "Burger Heroes", location: "location", type: "type"),
-        Place(image: "Kitchen", name: "Kitchen", location: "location", type: "type"),
-        Place(image: "Bonsai", name: "Bonsai", location: "location", type: "type"),
-        Place(image: "Дастархан", name: "Дастархан", location: "location", type: "type"),
-        Place(image: "Индокитай", name: "Индокитай", location: "location", type: "type"),
-        Place(image: "X.O", name: "X.O", location: "location", type: "type"),
-        Place(image: "Балкан Гриль", name: "Балкан Гриль", location: "location", type: "type"),
-        Place(image: "Sherlock Holmes", name: "Sherlock Holmes", location: "location", type: "type"),
-        Place(image: "Speak Easy", name: "Speak Easy", location: "location", type: "type"),
-        Place(image: "Morris Pub", name: "Morris Pub", location: "location", type: "type"),
-        Place(image: "Вкусные истории", name: "Вкусные истории", location: "location", type: "type"),
-        Place(image: "Классик", name: "Классик", location: "location", type: "type"),
-        Place(image: "Love&Life", name: "Love&Life", location: "location", type: "type"),
-        Place(image: "Шок", name: "Шок", location: "location", type: "type"),
-        Place(image: "Бочка", name: "Бочка", location: "location", type: "type")
+    var places = [ 
+        Place(restaurantImage: "Burger Heroes", image: nil, name: "Burger Heroes", location: "location", type: "type"),
+        Place(restaurantImage: "Kitchen",  image: nil,name: "Kitchen", location: "location", type: "type"),
+        Place(restaurantImage: "Bonsai",  image: nil,name: "Bonsai", location: "location", type: "type"),
+        Place(restaurantImage: "Дастархан",  image: nil,name: "Дастархан", location: "location", type: "type"),
+        Place(restaurantImage: "Индокитай",  image: nil,name: "Индокитай", location: "location", type: "type"),
+        Place(restaurantImage: "X.O",  image: nil,name: "X.O", location: "location", type: "type"),
+        Place(restaurantImage: "Балкан Гриль", image: nil, name: "Балкан Гриль", location: "location", type: "type"),
+        Place(restaurantImage: "Sherlock Holmes",  image: nil,name: "Sherlock Holmes", location: "location", type: "type"),
+        Place(restaurantImage: "Speak Easy", image: nil, name: "Speak Easy", location: "location", type: "type"),
+        Place(restaurantImage: "Morris Pub", image: nil, name: "Morris Pub", location: "location", type: "type"),
+        Place(restaurantImage: "Вкусные истории", image: nil, name: "Вкусные истории", location: "location", type: "type"),
+        Place(restaurantImage: "Классик", image: nil, name: "Классик", location: "location", type: "type"),
+        Place(restaurantImage: "Love&Life",  image: nil,name: "Love&Life", location: "location", type: "type"),
+        Place(restaurantImage: "Шок",  image: nil,name: "Шок", location: "location", type: "type"),
+        Place(restaurantImage: "Бочка",  image: nil, name: "Бочка", location: "location", type: "type")
     ]
 
   
@@ -51,7 +51,11 @@ class MainViewController: UITableViewController {
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         
-        cell.imageOfPlace.image = UIImage(named: places[indexPath.row].image!)
+        if place.image == nil {
+            cell.imageOfPlace.image = UIImage(named: places[indexPath.row].restaurantImage!)
+        } else{
+            cell.imageOfPlace.image = place.image
+        }
         return cell
     }
    
@@ -62,5 +66,13 @@ class MainViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
   
-    @IBAction func cancelAction(_ segue:UIStoryboardSegue) {}
+    @IBAction func undwindSegue(_ segue:UIStoryboardSegue) {
+        guard let newPlaceVC  = segue.source as? NewPlaceViewController else {
+            return
+        }
+        
+        newPlaceVC.saveNewPlace()
+        places.append(newPlaceVC.newPlace!)
+        tableView.reloadData()
+    }
 }
