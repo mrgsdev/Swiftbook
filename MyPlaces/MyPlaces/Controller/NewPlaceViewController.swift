@@ -105,6 +105,4 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate {
     
 }
 
-extension NewPlaceViewController: UINavigationControllerDelegate {
-    
-}
+extension NewPlaceViewController: UINavigationControllerDelegate { }

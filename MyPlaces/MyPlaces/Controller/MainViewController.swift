@@ -40,4 +40,14 @@ class MainViewController: UITableViewController {
         newPlaceVC.saveNewPlace()
         tableView.reloadData()
     }
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let place = places[indexPath.row]
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { _, _ in
+            StorageManager.deleteObject(place)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return [deleteAction]
+    }
 }
+
+
