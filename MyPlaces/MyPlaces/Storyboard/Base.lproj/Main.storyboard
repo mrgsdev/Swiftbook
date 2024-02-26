@@ -71,6 +71,7 @@
                                     <outlet property="locationLabel" destination="Lnh-gI-Y3Z" id="38m-k2-hm5"/>
                                     <outlet property="nameLabel" destination="clx-Nd-4y4" id="h0m-cZ-1C2"/>
                                     <outlet property="typeLabel" destination="W5P-Si-Rig" id="vJI-Pw-Pte"/>
+                                    <segue destination="8Jw-vx-Wfu" kind="show" identifier="showDetail" id="6XQ-Ux-uo4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -301,6 +302,9 @@
             <point key="canvasLocation" x="1468" y="-700"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6XQ-Ux-uo4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <systemColor name="opaqueSeparatorColor">

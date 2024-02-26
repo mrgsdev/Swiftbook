@@ -10,7 +10,6 @@ import RealmSwift
 class MainViewController: UITableViewController {
     
     var places: Results<Place>!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         places = realm.objects(Place.self)
@@ -37,9 +36,10 @@ class MainViewController: UITableViewController {
     // MARK: - Navigation
     @IBAction func undwindSegue(_ segue:UIStoryboardSegue) {
         guard let newPlaceVC  = segue.source as? NewPlaceViewController else { return }
-        newPlaceVC.saveNewPlace()
+        newPlaceVC.savePlace()
         tableView.reloadData()
     }
+    
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let place = places[indexPath.row]
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { _, _ in
@@ -47,6 +47,15 @@ class MainViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
         return [deleteAction]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let place = places[indexPath.row]
+            let newPlaceVC = segue.destination as! NewPlaceViewController
+            newPlaceVC.currentPlace = place
+        }
     }
 }
 
