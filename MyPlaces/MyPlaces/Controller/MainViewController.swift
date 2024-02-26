@@ -11,13 +11,36 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var reversedSortingButton: UIBarButtonItem!
     var places: Results<Place>!
+    var ascendingSorting = true
     override func viewDidLoad() {
         super.viewDidLoad()
         places = realm.objects(Place.self)
     }
     
+    @IBAction func sortSelection(_ sender: UISegmentedControl) {
+        
+        sorting()
+    }
     
+    @IBAction func reversedSorting(_ sender: UIBarButtonItem) {
+        ascendingSorting.toggle()
+        let imageName = ascendingSorting ? "AZ" : "ZA"
+        let image = UIImage(named: imageName)
+        reversedSortingButton.image = image
+        
+        sorting()
+    }
+    
+    private func sorting(){
+        if segmentControl.selectedSegmentIndex == 0 {
+            places = places.sorted(byKeyPath: "date",ascending: ascendingSorting)
+        } else {
+            places = places.sorted(byKeyPath: "name",ascending: ascendingSorting)
+        }
+        tableView.reloadData()
+    }
     
     
 }
