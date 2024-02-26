@@ -80,19 +80,67 @@
 		42488B932B89C85C005B2795 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				42C6E5962B8B85C700FB6D91 /* StorageManager.swift */,
-				42488B942B89C85C005B2795 /* AppDelegate.swift */,
-				42488B962B89C85C005B2795 /* SceneDelegate.swift */,
-				42488B9A2B89C85C005B2795 /* Main.storyboard */,
-				420A79202B8B6A44008758B3 /* NewPlaceViewController.swift */,
-				423EA0C92B89D08A00030957 /* CustomTableViewCell.swift */,
-				42488BA82B89C8DB005B2795 /* MainViewController.swift */,
-				423EA0CB2B89D2D400030957 /* PlaceModel.swift */,
-				42488B9D2B89C85D005B2795 /* Assets.xcassets */,
-				42488B9F2B89C85D005B2795 /* LaunchScreen.storyboard */,
+				42C6E5992B8B8D7400FB6D91 /* Model */,
+				42C6E59D2B8B8DD300FB6D91 /* View */,
+				42C6E59B2B8B8D9A00FB6D91 /* Controller */,
+				42C6E5982B8B8D6100FB6D91 /* Helpers */,
+				42C6E59A2B8B8D8700FB6D91 /* Support Files */,
 				42488BA22B89C85D005B2795 /* Info.plist */,
+				42C6E59C2B8B8DA900FB6D91 /* Storyboard */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		42C6E5982B8B8D6100FB6D91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				42C6E5962B8B85C700FB6D91 /* StorageManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		42C6E5992B8B8D7400FB6D91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				423EA0CB2B89D2D400030957 /* PlaceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42C6E59A2B8B8D8700FB6D91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42488B9D2B89C85D005B2795 /* Assets.xcassets */,
+				42488B942B89C85C005B2795 /* AppDelegate.swift */,
+				42488B962B89C85C005B2795 /* SceneDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		42C6E59B2B8B8D9A00FB6D91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				420A79202B8B6A44008758B3 /* NewPlaceViewController.swift */,
+				42488BA82B89C8DB005B2795 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		42C6E59C2B8B8DA900FB6D91 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				42488B9A2B89C85C005B2795 /* Main.storyboard */,
+				42488B9F2B89C85D005B2795 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		42C6E59D2B8B8DD300FB6D91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				423EA0C92B89D08A00030957 /* CustomTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A7F1D815F549C5A041A858E8 /* Frameworks */ = {
