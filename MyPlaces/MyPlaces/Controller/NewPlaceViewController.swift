@@ -17,7 +17,7 @@ class NewPlaceViewController: UITableViewController  {
     @IBOutlet weak var placeImage: UIImageView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()

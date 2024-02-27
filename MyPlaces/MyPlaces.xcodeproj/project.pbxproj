@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		420A79212B8B6A44008758B3 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A79202B8B6A44008758B3 /* NewPlaceViewController.swift */; };
+		420CFF242B8DC2ED008D3B68 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420CFF232B8DC2ED008D3B68 /* RatingControl.swift */; };
 		423EA0CA2B89D08A00030957 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EA0C92B89D08A00030957 /* CustomTableViewCell.swift */; };
 		423EA0CC2B89D2D400030957 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EA0CB2B89D2D400030957 /* PlaceModel.swift */; };
 		42488B952B89C85C005B2795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42488B942B89C85C005B2795 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		35BCAD9F9E2138BAEC51F4A0 /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		420A79202B8B6A44008758B3 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		420CFF232B8DC2ED008D3B68 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		423EA0C92B89D08A00030957 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		423EA0CB2B89D2D400030957 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		42488B912B89C85C005B2795 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 		42C6E5992B8B8D7400FB6D91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				420CFF232B8DC2ED008D3B68 /* RatingControl.swift */,
 				423EA0CB2B89D2D400030957 /* PlaceModel.swift */,
 			);
 			path = Model;
@@ -270,6 +273,7 @@
 				420A79212B8B6A44008758B3 /* NewPlaceViewController.swift in Sources */,
 				42488BA92B89C8DB005B2795 /* MainViewController.swift in Sources */,
 				42C6E5972B8B85C700FB6D91 /* StorageManager.swift in Sources */,
+				420CFF242B8DC2ED008D3B68 /* RatingControl.swift in Sources */,
 				423EA0CC2B89D2D400030957 /* PlaceModel.swift in Sources */,
 				423EA0CA2B89D08A00030957 /* CustomTableViewCell.swift in Sources */,
 				42488B972B89C85C005B2795 /* SceneDelegate.swift in Sources */,
