@@ -104,7 +104,7 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource{
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
-        
+        cell.cosmosView.rating = place.rating
         return cell
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
