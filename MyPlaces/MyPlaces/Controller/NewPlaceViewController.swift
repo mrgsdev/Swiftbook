@@ -13,6 +13,7 @@ class NewPlaceViewController: UITableViewController  {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var placeLocation: UITextField!
+    @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var placeImage: UIImageView!
     
@@ -60,13 +61,14 @@ class NewPlaceViewController: UITableViewController  {
     }
     func savePlace()  {
         let image: UIImage? = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
-        let newPlace = Place(name: placeName.text!, location: placeLocation.text!, type: placeType.text!, imageData: image?.pngData())
+        let newPlace = Place(name: placeName.text!, location: placeLocation.text!, type: placeType.text!, imageData: image?.pngData(), rating: Double(ratingControl.rating))
         if currentPlace != nil {
             try! realm.write {
                 currentPlace?.name = newPlace.name
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
             StorageManager.saveObject(newPlace)
@@ -85,6 +87,10 @@ class NewPlaceViewController: UITableViewController  {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            if let currentPlace = currentPlace?.rating {
+                ratingControl.rating = Int(currentPlace)
+            }
+            
         }
     }
     private func setupNavigationBar() {
