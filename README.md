@@ -8,6 +8,7 @@
 >- [x] [WeekDay | T-Converter | Pass Data Project](#1)
 >- [x] [UIKit Framework](#2)
 >- [x] [TableView & CollectionView](#3)
+>- [x] [MyPlaces](#4)
 
 
 <a name="1"></a>
@@ -21,3 +22,8 @@
 <a name="3"></a>
 ## [TableView & CollectionView](https://github.com/mrgsdev/Swiftbook/tree/main/TableView%26CollectionVIew) 
 ![tablevc collectionvc](https://github.com/mrgsdev/Swiftbook/assets/157994617/d44fa195-9863-4947-a293-5065d1a1809f)
+
+<a name="4"></a>
+## [MyPlaces](https://github.com/mrgsdev/Swiftbook/tree/main/MyPlaces) 
+![(Portrait) copy](https://github.com/mrgsdev/Swiftbook/assets/157994617/0f336306-cbda-4979-af3f-3db710a51655)
+
