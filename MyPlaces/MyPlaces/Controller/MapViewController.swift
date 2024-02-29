@@ -10,7 +10,7 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    var place: Place?
+    var place = Place()
     let annotationID = "annotationID"
     @IBOutlet weak var mapView: MKMapView!
     
@@ -26,7 +26,7 @@ class MapViewController: UIViewController {
     
     
     private func setupPlacemark(){
-        guard let location = place!.location else { return }
+        guard let location = place.location else { return }
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(location) { placemarks, error in
             
@@ -40,8 +40,8 @@ class MapViewController: UIViewController {
             let placemark = placemarks.first
             print(placemark!)
             let annotatition = MKPointAnnotation()
-            annotatition.title = self.place?.name
-            annotatition.subtitle = self.place?.type
+            annotatition.title = self.place.name
+            annotatition.subtitle = self.place.type
             
             guard let placemarkLocation = placemark?.location else { return }
             annotatition.coordinate = placemarkLocation.coordinate
@@ -68,7 +68,7 @@ extension MapViewController: MKMapViewDelegate {
             annotationView?.canShowCallout = true
         }
         
-        if let imageData = place!.imageData {
+        if let imageData = place.imageData {
             
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             imageView.layer.cornerRadius = 10

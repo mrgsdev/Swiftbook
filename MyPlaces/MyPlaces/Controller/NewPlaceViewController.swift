@@ -64,7 +64,10 @@ class NewPlaceViewController: UITableViewController  {
             return
         }
         let mapVC = segue.destination as! MapViewController
-        mapVC.place = currentPlace
+        mapVC.place.name = placeName.text
+        mapVC.place.location = placeLocation.text
+        mapVC.place.type = placeType.text
+        mapVC.place.imageData = placeImage.image?.pngData()
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
