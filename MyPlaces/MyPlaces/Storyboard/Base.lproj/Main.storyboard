@@ -421,10 +421,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="izy-u0-bIm"/>
+                    <connections>
+                        <outlet property="mapView" destination="XtJ-ay-urk" id="cVu-6W-7Oi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVu-wt-qv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="13"/>
+            <point key="canvasLocation" x="2273" y="25"/>
         </scene>
     </scenes>
     <designables>
