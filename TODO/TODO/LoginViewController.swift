@@ -100,8 +100,8 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            let userRef = self?.ref.child((user?.user.uid)!)
-            userRef?.setValue(["email": user?.user.uid])
+//            let userRef = self?.ref.child((user?.user.uid)!)
+//            userRef?.setValue(["email": user?.user.uid])
           
         })
     }
