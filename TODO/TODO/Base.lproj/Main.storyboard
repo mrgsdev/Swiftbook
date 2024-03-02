@@ -172,7 +172,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="V9Q-Dw-Ubb">
                             <connections>
-                                <action selector="addTapped:" destination="8me-Si-nhI" id="ldF-un-khI"/>
+                                <action selector="addTapped:" destination="8me-Si-nhI" id="cc3-oO-1OS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

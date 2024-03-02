@@ -42,6 +42,8 @@
 		427EB7992B91BA6600AA748F /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 427EB7982B91BA6600AA748F /* FirebaseRemoteConfigSwift */; };
 		427EB79B2B91BA6600AA748F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 427EB79A2B91BA6600AA748F /* FirebaseStorage */; };
 		427EB79D2B91BA6600AA748F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 427EB79C2B91BA6600AA748F /* FirebaseStorageCombine-Community */; };
+		427EB7BF2B9323F400AA748F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427EB7BE2B9323F400AA748F /* Task.swift */; };
+		427EB7C12B93243D00AA748F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427EB7C02B93243D00AA748F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		427EB75D2B91B64800AA748F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		427EB7632B91B71700AA748F /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		427EB7652B91B9BD00AA748F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		427EB7BE2B9323F400AA748F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		427EB7C02B93243D00AA748F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +118,13 @@
 		427EB74E2B91B64700AA748F /* TODO */ = {
 			isa = PBXGroup;
 			children = (
+				427EB7BE2B9323F400AA748F /* Task.swift */,
 				427EB74F2B91B64700AA748F /* AppDelegate.swift */,
 				427EB7512B91B64700AA748F /* SceneDelegate.swift */,
 				427EB7532B91B64700AA748F /* LoginViewController.swift */,
 				427EB7552B91B64700AA748F /* Main.storyboard */,
 				427EB7632B91B71700AA748F /* TasksViewController.swift */,
+				427EB7C02B93243D00AA748F /* User.swift */,
 				427EB7582B91B64800AA748F /* Assets.xcassets */,
 				427EB75A2B91B64800AA748F /* LaunchScreen.storyboard */,
 				427EB75D2B91B64800AA748F /* Info.plist */,
@@ -233,6 +239,8 @@
 			files = (
 				427EB7542B91B64700AA748F /* LoginViewController.swift in Sources */,
 				427EB7642B91B71700AA748F /* TasksViewController.swift in Sources */,
+				427EB7C12B93243D00AA748F /* User.swift in Sources */,
+				427EB7BF2B9323F400AA748F /* Task.swift in Sources */,
 				427EB7502B91B64700AA748F /* AppDelegate.swift in Sources */,
 				427EB7522B91B64700AA748F /* SceneDelegate.swift in Sources */,
 			);
