@@ -1,8 +1,8 @@
 # Swiftbook
   >[SwiftBook](https://swiftbook.ru/) is the leading resource for learning the Swift programming language in Russia and the CIS countries!
 
- - [x] **finalized**
- - [ ] ***not finalized***
+ - [x] **Completed**
+ - [ ] **Incomplete**
 
 ### Contents  
 >- [x] [WeekDay | T-Converter | Pass Data Project](#1)
