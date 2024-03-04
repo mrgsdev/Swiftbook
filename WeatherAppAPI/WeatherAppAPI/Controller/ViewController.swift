@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     let networkWeatherManager = NetworkWeatherManager()
     
     @IBAction func searchPressed(_ sender: UIButton) {
-        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert)
+        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { city in
+            self.networkWeatherManager.fetchCurrentWeather(forCity: city)
+            self.cityLabel.text = city
+        }
     }
     
     override func viewDidLoad() {
