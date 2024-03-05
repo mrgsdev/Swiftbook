@@ -18,7 +18,7 @@ extension ViewController {
             let textField = ac.textFields?.first
             guard let cityName = textField?.text else { return }
             if cityName != "" {
-                self.networkWeatherManager.fetchCurrentWeather(forCity: cityName)
+//                self.networkWeatherManager.fetchCurrentWeather(forCity: cityName)
                 let city = cityName.split(separator: " ").joined(separator: "%20")
                 completionHandler(city)
             }
@@ -29,5 +29,5 @@ extension ViewController {
         ac.addAction(cancel)
         present(ac, animated: true, completion: nil)
     }
-    
 }
+
