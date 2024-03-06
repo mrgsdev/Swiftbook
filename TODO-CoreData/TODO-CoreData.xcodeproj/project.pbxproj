@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		42457AD12B984910003F18EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42457AD02B984910003F18EA /* AppDelegate.swift */; };
 		42457AD32B984910003F18EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42457AD22B984910003F18EA /* SceneDelegate.swift */; };
-		42457AD52B984910003F18EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42457AD42B984910003F18EA /* ViewController.swift */; };
 		42457AD82B984910003F18EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42457AD62B984910003F18EA /* Main.storyboard */; };
 		42457ADB2B984910003F18EA /* TODO_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42457AD92B984910003F18EA /* TODO_CoreData.xcdatamodeld */; };
 		42457ADD2B984911003F18EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42457ADC2B984911003F18EA /* Assets.xcassets */; };
 		42457AE02B984911003F18EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42457ADE2B984911003F18EA /* LaunchScreen.storyboard */; };
+		42457AE82B9849A9003F18EA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42457AE72B9849A9003F18EA /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42457ACD2B984910003F18EA /* TODO-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42457AD02B984910003F18EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42457AD22B984910003F18EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42457AD42B984910003F18EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42457AD72B984910003F18EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42457ADA2B984910003F18EA /* TODO_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TODO_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		42457ADC2B984911003F18EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42457ADF2B984911003F18EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42457AE12B984911003F18EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42457AE72B9849A9003F18EA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				42457AD02B984910003F18EA /* AppDelegate.swift */,
 				42457AD22B984910003F18EA /* SceneDelegate.swift */,
-				42457AD42B984910003F18EA /* ViewController.swift */,
 				42457AD62B984910003F18EA /* Main.storyboard */,
+				42457AE72B9849A9003F18EA /* TableViewController.swift */,
 				42457ADC2B984911003F18EA /* Assets.xcassets */,
 				42457ADE2B984911003F18EA /* LaunchScreen.storyboard */,
 				42457AE12B984911003F18EA /* Info.plist */,
@@ -141,9 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42457AD52B984910003F18EA /* ViewController.swift in Sources */,
 				42457AD12B984910003F18EA /* AppDelegate.swift in Sources */,
 				42457ADB2B984910003F18EA /* TODO_CoreData.xcdatamodeld in Sources */,
+				42457AE82B9849A9003F18EA /* TableViewController.swift in Sources */,
 				42457AD32B984910003F18EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
