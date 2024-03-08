@@ -11,6 +11,13 @@ class ViewController: UIViewController {
     
     var context: NSManagedObjectContext!
     
+    lazy var dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateStyle = .short
+        df.timeStyle = .none
+        return df
+    }()
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var markLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
@@ -19,8 +26,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOfTripsLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var myChoiceImageView: UIImageView!
-    
-    
     
     @IBAction func segmentedCtrlPressed(_ sender: UISegmentedControl) {
         
@@ -32,6 +37,18 @@ class ViewController: UIViewController {
     
     @IBAction func rateItPressed(_ sender: UIButton) {
         
+    }
+    
+    private func insertDataFrom(selectedCar car: Car) {
+        carImageView.image = UIImage(data: car.imageData!)
+        markLabel.text = car.mark
+        modelLabel.text = car.model
+        myChoiceImageView.isHidden = !(car.myChoice)
+        ratingLabel.text = "Rating: \(car.rating) / 10"
+        numberOfTripsLabel.text = "Number of trips: \(car.timesDriven)"
+        
+        lastTimeStartedLabel.text = "Last time started: \(dateFormatter.string(from: car.lastStarted!))"
+        segmentedControl.tintColor = car.tintColor as? UIColor
     }
     
     private func getDataFromFile() {
@@ -78,7 +95,7 @@ class ViewController: UIViewController {
     
     private func getColor(colorDictionary: [String : Float]) -> UIColor {
         guard let red = colorDictionary["red"],
-        let green = colorDictionary["green"],
+            let green = colorDictionary["green"],
             let blue = colorDictionary["blue"] else { return UIColor() }
         return UIColor(red: CGFloat(red / 255), green: CGFloat(green / 255), blue: CGFloat(blue / 255), alpha: 1.0)
     }
@@ -87,6 +104,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         getDataFromFile()
+        
+        let fetchRequest: NSFetchRequest<Car> = Car.fetchRequest()
+        let mark = segmentedControl.titleForSegment(at: 0)
+        fetchRequest.predicate = NSPredicate(format: "mark == %@", mark!)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            let car = results.first
+            insertDataFrom(selectedCar: car!)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 
