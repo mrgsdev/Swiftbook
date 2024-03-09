@@ -10,7 +10,7 @@ import CoreData
 class ViewController: UIViewController {
     
     var context: NSManagedObjectContext!
-    
+    var selectedCar: Car!
     lazy var dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateStyle = .short
@@ -32,13 +32,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startEnginePressed(_ sender: UIButton) {
+        selectedCar.timesDriven += 1
+        selectedCar.lastStarted = Date()
         
+        do {
+          try context.save()
+          insertDataFrom(selectedCar: selectedCar)
+        } catch {
+          print(error.localizedDescription)
+        }
     }
     
     @IBAction func rateItPressed(_ sender: UIButton) {
+        let ac = UIAlertController(title: "Rate it", message: "Rate this car please", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) {
+          action in
+          
+          let textField = ac.textFields?[0]
+          self.update(rating: textField!.text!)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .default)
         
+        ac.addTextField {
+          textField in
+          textField.keyboardType = .numberPad
+        }
+        
+        ac.addAction(ok)
+        ac.addAction(cancel)
+        present(ac, animated: true)
     }
-    
+    func update(rating: String) {
+        selectedCar.rating = Double(truncating: NSNumber(value: Double(rating)!))
+      
+      do {
+        try context.save()
+        insertDataFrom(selectedCar: selectedCar)
+      } catch {
+        
+        let ac = UIAlertController(title: "Wrong value", message: "Wrong input", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        ac.addAction(ok)
+        present(ac, animated: true, completion: nil)
+        print(error.localizedDescription)
+      }
+    }
     private func insertDataFrom(selectedCar car: Car) {
         carImageView.image = UIImage(data: car.imageData!)
         markLabel.text = car.mark
@@ -110,11 +148,11 @@ class ViewController: UIViewController {
         fetchRequest.predicate = NSPredicate(format: "mark == %@", mark!)
         
         do {
-            let results = try context.fetch(fetchRequest)
-            let car = results.first
-            insertDataFrom(selectedCar: car!)
-        } catch let error as NSError {
-            print(error.localizedDescription)
+          let results = try context.fetch(fetchRequest)
+          selectedCar = results[0]
+          insertDataFrom(selectedCar: selectedCar)
+        } catch {
+          print(error.localizedDescription)
         }
     }
 }
