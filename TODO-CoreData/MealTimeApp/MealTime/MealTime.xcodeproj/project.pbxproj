@@ -13,6 +13,7 @@
 		42E9B6BE2B9D949A00316429 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 42E9B6BD2B9D949A00316429 /* Base */; };
 		42E9B6C02B9D949B00316429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9B6BF2B9D949B00316429 /* Assets.xcassets */; };
 		42E9B6C32B9D949B00316429 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 42E9B6C22B9D949B00316429 /* Base */; };
+		42E9B6CB2B9D958500316429 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B6CA2B9D958500316429 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		42E9B6BF2B9D949B00316429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42E9B6C22B9D949B00316429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42E9B6C42B9D949B00316429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E9B6CA2B9D958500316429 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				42E9B6B62B9D949A00316429 /* AppDelegate.swift */,
 				42E9B6B82B9D949A00316429 /* SceneDelegate.swift */,
 				42E9B6BA2B9D949A00316429 /* ViewController.swift */,
+				42E9B6CA2B9D958500316429 /* CoreDataStack.swift */,
 				42E9B6BC2B9D949A00316429 /* Main.storyboard */,
 				42E9B6BF2B9D949B00316429 /* Assets.xcassets */,
 				42E9B6C12B9D949B00316429 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				42E9B6BB2B9D949A00316429 /* ViewController.swift in Sources */,
 				42E9B6B72B9D949A00316429 /* AppDelegate.swift in Sources */,
 				42E9B6B92B9D949A00316429 /* SceneDelegate.swift in Sources */,
+				42E9B6CB2B9D958500316429 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

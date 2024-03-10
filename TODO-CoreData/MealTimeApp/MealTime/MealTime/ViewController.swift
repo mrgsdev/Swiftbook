@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    var context: NSManagedObjectContext!
     var array = [Date]()
     
     lazy var dateFormatter: DateFormatter = {
