@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="llV-wO-fnA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MealTime-->
+        <scene sceneID="sL2-mf-XqD">
+            <objects>
+                <viewController id="LzQ-9U-EOn" customClass="ViewController" customModule="MealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2G-Vn-dK7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-vU-u6m">
+                                <rect key="frame" x="0.0" y="103" width="393" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mdf-vU-u6m" secondAttribute="height" multiplier="417:155" id="UEo-Xh-gGV"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lck-ML-HrE">
+                                <rect key="frame" x="0.0" y="238" width="414" height="624"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LzQ-9U-EOn" id="b6v-FD-Nfb"/>
+                                    <outlet property="delegate" destination="LzQ-9U-EOn" id="Y89-3R-l27"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6z8-ZK-gdA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mdf-vU-u6m" firstAttribute="leading" secondItem="6z8-ZK-gdA" secondAttribute="leading" id="0LU-QU-9zy"/>
+                            <constraint firstItem="mdf-vU-u6m" firstAttribute="top" secondItem="6z8-ZK-gdA" secondAttribute="top" id="R5I-nO-bVf"/>
+                            <constraint firstItem="mdf-vU-u6m" firstAttribute="trailing" secondItem="6z8-ZK-gdA" secondAttribute="trailing" id="ZnZ-9T-sEj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MealTime" id="b4Q-yj-Efv">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Ovl-s4-y4x">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="LzQ-9U-EOn" id="FMz-qK-tCK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Lck-ML-HrE" id="5GU-oo-aXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99M-27-WuV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851.1450381679388" y="111.9718309859155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hna-05-Vti">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="llV-wO-fnA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b0f-dR-PxW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LzQ-9U-EOn" kind="relationship" relationship="rootViewController" id="hLu-R1-hU0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8i-l5-Ug5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924.4274809160305" y="111.9718309859155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meal" width="601" height="223"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
