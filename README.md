@@ -9,7 +9,8 @@
 >- [x] [UIKit Framework](#2)
 >- [x] [TableView & CollectionView](#3)
 >- [x] [MyPlaces](#4)
->- [x] [TODO Firebase](#5) 
+>- [x] [TODO Firebase](#5)
+>- [x] [CoreData Apps](#6) 
 
 
 <a name="1"></a>
@@ -31,4 +32,8 @@
 <a name="5"></a>
 ## [TODO Firebase](https://github.com/mrgsdev/Swiftbook/tree/main/TODO)
 ![Firebase](https://github.com/mrgsdev/Swiftbook/assets/157994617/9f7db94f-7d10-4122-8b3a-23f25cfe3ba0)
+
+<a name="6"></a>
+## [CoreData Apps](https://github.com/mrgsdev/Swiftbook/tree/main/TODO-CoreData)
+![CoreData](https://github.com/mrgsdev/Swiftbook/assets/157994617/0655299d-1d7a-4309-b9dc-2978b6985787)
 
