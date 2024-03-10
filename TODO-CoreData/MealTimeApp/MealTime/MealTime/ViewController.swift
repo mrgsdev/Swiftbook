@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource 
+// MARK: - UITableViewDataSource
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -83,6 +83,18 @@ extension ViewController: UITableViewDataSource {
         
         cell.textLabel!.text = dateFormatter.string(from: mealDate)
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let meal = user.meals?[indexPath.row] as? Meal, editingStyle == .delete else { return }
+        
+        context.delete(meal)
+        
+        do {
+            try context.save()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 
