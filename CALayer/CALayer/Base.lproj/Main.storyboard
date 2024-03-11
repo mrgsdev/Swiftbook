@@ -82,7 +82,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yB2-tB-cdr" kind="show" id="cEm-mW-WiW"/>
+                                    <action selector="tapped:" destination="LLT-TT-Kvp" eventType="touchUpInside" id="kYf-zj-t1O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="button" destination="abY-LC-nj3" id="P3h-Vg-NMt"/>
                         <outlet property="imageView" destination="PBd-O4-Mq2" id="9KH-Cg-azv"/>
+                        <segue destination="yB2-tB-cdr" kind="show" identifier="showSecondScreen" id="4C0-gu-Y3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkX-dM-gUV" sceneMemberID="firstResponder"/>

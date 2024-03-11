@@ -13,9 +13,9 @@ class SecondViewController: UIViewController {
         didSet{
             gradientLayer.startPoint = CGPoint(x: 0, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-            let red = UIColor.red.cgColor;
-            let black = UIColor.black.cgColor
-            gradientLayer.colors = [red,black]
+            let startColor = UIColor.red.cgColor;
+            let endColor = UIColor.white.cgColor
+            gradientLayer.colors = [startColor,endColor]
             gradientLayer.locations = [0.1,1,0.5,1]
         }
     }
@@ -45,19 +45,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientLayer = CAGradientLayer()
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        // Do any additional setup after loading the view.
+        view.layer.insertSublayer(gradientLayer, at: 0) 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
