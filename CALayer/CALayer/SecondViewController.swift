@@ -9,6 +9,18 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    private var gradientLayer: CAGradientLayer! {
+        didSet{
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+            let red = UIColor.red.cgColor;
+            let black = UIColor.black.cgColor
+            gradientLayer.colors = [red,black]
+            gradientLayer.locations = [0.1,1,0.5,1]
+        }
+    }
+    
+    
     @IBOutlet weak var imageView: UIImageView! {
         didSet{
             imageView.layer.cornerRadius = imageView.frame.size.height / 2
@@ -25,9 +37,15 @@ class SecondViewController: UIViewController {
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        let viewBounds = self.view.bounds
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: viewBounds.width, height: viewBounds.height)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gradientLayer = CAGradientLayer()
+        view.layer.insertSublayer(gradientLayer, at: 0)
         // Do any additional setup after loading the view.
     }
     
