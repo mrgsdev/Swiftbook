@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fbE-Vd-u9B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iuS-pY-JGJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="0WM-9s-cP2">
             <objects>
                 <viewController id="fbE-Vd-u9B" customClass="ViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-xo-qY9">
-                                <rect key="frame" x="16" y="59" width="361" height="739"/>
+                                <rect key="frame" x="16" y="59" width="361" height="690"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="45"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.22352941179999999" green="0.28235294119999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-fB-1ZV">
-                                <rect key="frame" x="16" y="59" width="361" height="739"/>
+                                <rect key="frame" x="16" y="59" width="361" height="690"/>
                                 <connections>
                                     <action selector="getImagePressed:" destination="fbE-Vd-u9B" eventType="touchUpInside" id="PFS-b1-02b"/>
                                 </connections>
@@ -54,6 +54,7 @@
                             <constraint firstItem="Wns-fz-5sg" firstAttribute="top" secondItem="HgO-oE-Q8P" secondAttribute="top" id="tr0-gC-Ike"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9CS-76-7d0"/>
                     <connections>
                         <outlet property="activityIndicator" destination="I3Y-1h-b9f" id="Kst-ii-uvA"/>
                         <outlet property="getImageButton" destination="Lqw-fB-1ZV" id="I9i-Wu-ZkB"/>
@@ -63,7 +64,171 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JK2-6b-3V8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1063.3587786259541" y="132.3943661971831"/>
+        </scene>
+        <!--Controls-->
+        <scene sceneID="MOQ-3J-WSM">
+            <objects>
+                <viewController id="8Fi-bK-h6W" customClass="MainViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOe-L4-O4p">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJb-UD-2b8">
+                                <rect key="frame" x="16" y="143" width="361" height="146"/>
+                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="pwQ-gS-jjR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <state key="normal" title="Press to Download Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Slk-DA-EDu" kind="show" id="GYK-43-eTa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDP-pt-aXp">
+                                <rect key="frame" x="16" y="329" width="361" height="146"/>
+                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="0uw-5Q-9dI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getRequest:" destination="8Fi-bK-h6W" eventType="touchUpInside" id="bef-Qu-C51"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XD-rw-7FR">
+                                <rect key="frame" x="16" y="515" width="361" height="146"/>
+                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="WyK-Ho-7jV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postRequest:" destination="8Fi-bK-h6W" eventType="touchUpInside" id="nGc-4V-cBm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cfM-ez-KXB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PJb-UD-2b8" firstAttribute="leading" secondItem="cfM-ez-KXB" secondAttribute="leading" constant="16" id="4MI-vR-Ejo"/>
+                            <constraint firstItem="cfM-ez-KXB" firstAttribute="trailing" secondItem="8XD-rw-7FR" secondAttribute="trailing" constant="16" id="96o-VO-ybY"/>
+                            <constraint firstItem="cfM-ez-KXB" firstAttribute="trailing" secondItem="kDP-pt-aXp" secondAttribute="trailing" constant="16" id="GmE-H2-3PX"/>
+                            <constraint firstItem="cfM-ez-KXB" firstAttribute="trailing" secondItem="PJb-UD-2b8" secondAttribute="trailing" constant="16" id="NJx-3Q-faB"/>
+                            <constraint firstItem="kDP-pt-aXp" firstAttribute="top" secondItem="PJb-UD-2b8" secondAttribute="bottom" constant="40" id="Nlc-3A-2jF"/>
+                            <constraint firstItem="8XD-rw-7FR" firstAttribute="top" secondItem="kDP-pt-aXp" secondAttribute="bottom" constant="40" id="Pd9-ll-szL"/>
+                            <constraint firstItem="PJb-UD-2b8" firstAttribute="top" secondItem="cfM-ez-KXB" secondAttribute="top" constant="40" id="f4J-8N-Eb9"/>
+                            <constraint firstItem="8XD-rw-7FR" firstAttribute="leading" secondItem="cfM-ez-KXB" secondAttribute="leading" constant="16" id="fEE-aR-Pmv"/>
+                            <constraint firstItem="kDP-pt-aXp" firstAttribute="leading" secondItem="cfM-ez-KXB" secondAttribute="leading" constant="16" id="hhQ-Ox-IzX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controls" id="tmg-a2-iw2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJf-pu-uc3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="844"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="iPC-5r-u53">
+            <objects>
+                <viewController id="Slk-DA-EDu" customClass="ImageViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdO-uw-ydC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-eh-cBX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="j2L-yh-qiN">
+                                <rect key="frame" x="186.66666666666666" y="426" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YNZ-GB-p2k"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zyq-eh-cBX" firstAttribute="trailing" secondItem="YNZ-GB-p2k" secondAttribute="trailing" id="AFN-3B-Eju"/>
+                            <constraint firstItem="j2L-yh-qiN" firstAttribute="centerY" secondItem="zyq-eh-cBX" secondAttribute="centerY" id="EoQ-q6-G8n"/>
+                            <constraint firstItem="j2L-yh-qiN" firstAttribute="centerX" secondItem="zyq-eh-cBX" secondAttribute="centerX" id="P9R-W8-CzT"/>
+                            <constraint firstItem="zyq-eh-cBX" firstAttribute="top" secondItem="YNZ-GB-p2k" secondAttribute="top" id="jEo-fs-nUm"/>
+                            <constraint firstItem="zyq-eh-cBX" firstAttribute="bottom" secondItem="YNZ-GB-p2k" secondAttribute="bottom" id="u49-pK-dg3"/>
+                            <constraint firstItem="zyq-eh-cBX" firstAttribute="leading" secondItem="YNZ-GB-p2k" secondAttribute="leading" id="yZ8-fR-mPp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image" id="WjR-8m-cDW"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="j2L-yh-qiN" id="mAr-A2-hai"/>
+                        <outlet property="imageView" destination="zyq-eh-cBX" id="9ow-XF-NQu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vB2-7g-Oyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1827" y="844"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="KYz-Ww-Zj3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9k9-NP-hJA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="B6P-Dx-Tsb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y2M-db-TJi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Fi-bK-h6W" kind="relationship" relationship="rootViewController" id="8y2-1I-AJv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgS-9w-7Ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="844"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1sF-A0-saj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iuS-pY-JGJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oOd-OT-pCQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fbE-Vd-u9B" kind="relationship" relationship="viewControllers" id="fE5-4g-7as"/>
+                        <segue destination="9k9-NP-hJA" kind="relationship" relationship="viewControllers" id="Uvh-0b-BbI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sb9-oj-1eZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="132.3943661971831"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
