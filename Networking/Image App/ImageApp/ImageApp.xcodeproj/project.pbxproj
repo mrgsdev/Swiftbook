@@ -18,6 +18,8 @@
 		42E9B7232BA03D8300316429 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7222BA03D8300316429 /* CoursesViewController.swift */; };
 		42E9B7252BA03D9400316429 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7242BA03D9400316429 /* WebViewController.swift */; };
 		42E9B7272BA03E0900316429 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7262BA03E0900316429 /* TableViewCell.swift */; };
+		42E9B7292BA03EBE00316429 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7282BA03EBE00316429 /* Course.swift */; };
+		42E9B72B2BA0404500316429 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B72A2BA0404500316429 /* WebsiteDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		42E9B7222BA03D8300316429 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		42E9B7242BA03D9400316429 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		42E9B7262BA03E0900316429 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		42E9B7282BA03EBE00316429 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		42E9B72A2BA0404500316429 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				42E9B7262BA03E0900316429 /* TableViewCell.swift */,
 				42E9B7242BA03D9400316429 /* WebViewController.swift */,
 				42E9B7222BA03D8300316429 /* CoursesViewController.swift */,
+				42E9B72A2BA0404500316429 /* WebsiteDescription.swift */,
+				42E9B7282BA03EBE00316429 /* Course.swift */,
 				42E9B7202BA039A200316429 /* ImageViewController.swift */,
 				42E9B71E2BA0399700316429 /* MainViewController.swift */,
 				42E9B7132BA0362C00316429 /* Assets.xcassets */,
@@ -153,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E9B7292BA03EBE00316429 /* Course.swift in Sources */,
 				42E9B70F2BA0362B00316429 /* ViewController.swift in Sources */,
 				42E9B7272BA03E0900316429 /* TableViewCell.swift in Sources */,
 				42E9B70B2BA0362B00316429 /* AppDelegate.swift in Sources */,
@@ -160,6 +167,7 @@
 				42E9B70D2BA0362B00316429 /* SceneDelegate.swift in Sources */,
 				42E9B7252BA03D9400316429 /* WebViewController.swift in Sources */,
 				42E9B71F2BA0399700316429 /* MainViewController.swift in Sources */,
+				42E9B72B2BA0404500316429 /* WebsiteDescription.swift in Sources */,
 				42E9B7232BA03D8300316429 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
