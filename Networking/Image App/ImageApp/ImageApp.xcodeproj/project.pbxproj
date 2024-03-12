@@ -22,6 +22,7 @@
 		42E9B72D2BA08ABB00316429 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B72C2BA08ABB00316429 /* CollectionViewCell.swift */; };
 		42E9B7312BA08B3A00316429 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7302BA08B3A00316429 /* MainViewController.swift */; };
 		42E9B7332BA08B6A00316429 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7322BA08B6A00316429 /* NetworkManager.swift */; };
+		42E9B7352BA08F8700316429 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9B7342BA08F8700316429 /* ImageProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		42E9B72C2BA08ABB00316429 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		42E9B7302BA08B3A00316429 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42E9B7322BA08B6A00316429 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		42E9B7342BA08F8700316429 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				42E9B7282BA03EBE00316429 /* Course.swift */,
 				42E9B7202BA039A200316429 /* ImageViewController.swift */,
 				42E9B7132BA0362C00316429 /* Assets.xcassets */,
+				42E9B7342BA08F8700316429 /* ImageProperties.swift */,
 				42E9B7152BA0362C00316429 /* LaunchScreen.storyboard */,
 				42E9B7182BA0362C00316429 /* Info.plist */,
 			);
@@ -170,6 +173,7 @@
 				42E9B70F2BA0362B00316429 /* ViewController.swift in Sources */,
 				42E9B7332BA08B6A00316429 /* NetworkManager.swift in Sources */,
 				42E9B7272BA03E0900316429 /* TableViewCell.swift in Sources */,
+				42E9B7352BA08F8700316429 /* ImageProperties.swift in Sources */,
 				42E9B70B2BA0362B00316429 /* AppDelegate.swift in Sources */,
 				42E9B7212BA039A200316429 /* ImageViewController.swift in Sources */,
 				42E9B70D2BA0362B00316429 /* SceneDelegate.swift in Sources */,
