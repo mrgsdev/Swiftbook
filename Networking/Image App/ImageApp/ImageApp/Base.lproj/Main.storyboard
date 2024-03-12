@@ -1,24 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fbE-Vd-u9B">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="0WM-9s-cP2">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="fbE-Vd-u9B" customClass="ViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HgO-oE-Q8P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wns-fz-5sg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-xo-qY9">
+                                <rect key="frame" x="16" y="59" width="361" height="739"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="45"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.22352941179999999" green="0.28235294119999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-fB-1ZV">
+                                <rect key="frame" x="16" y="59" width="361" height="739"/>
+                                <connections>
+                                    <action selector="getImagePressed:" destination="fbE-Vd-u9B" eventType="touchUpInside" id="PFS-b1-02b"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I3Y-1h-b9f">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XiK-wi-oEB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wns-fz-5sg" firstAttribute="leading" secondItem="XiK-wi-oEB" secondAttribute="leading" id="2Tu-gH-q1k"/>
+                            <constraint firstItem="0Vd-xo-qY9" firstAttribute="top" secondItem="XiK-wi-oEB" secondAttribute="top" id="3Ir-6D-Z23"/>
+                            <constraint firstItem="XiK-wi-oEB" firstAttribute="bottom" secondItem="Lqw-fB-1ZV" secondAttribute="bottom" constant="20" id="7co-5b-koe"/>
+                            <constraint firstItem="Wns-fz-5sg" firstAttribute="bottom" secondItem="HgO-oE-Q8P" secondAttribute="bottom" id="Iaw-q5-87q"/>
+                            <constraint firstItem="Lqw-fB-1ZV" firstAttribute="top" secondItem="XiK-wi-oEB" secondAttribute="top" id="N4l-fK-GVY"/>
+                            <constraint firstItem="Lqw-fB-1ZV" firstAttribute="leading" secondItem="XiK-wi-oEB" secondAttribute="leading" constant="16" id="O40-La-ME0"/>
+                            <constraint firstItem="0Vd-xo-qY9" firstAttribute="leading" secondItem="XiK-wi-oEB" secondAttribute="leading" constant="16" id="W8J-fZ-CdU"/>
+                            <constraint firstItem="XiK-wi-oEB" firstAttribute="trailing" secondItem="Lqw-fB-1ZV" secondAttribute="trailing" constant="16" id="WG0-gv-3Sk"/>
+                            <constraint firstItem="I3Y-1h-b9f" firstAttribute="centerX" secondItem="Wns-fz-5sg" secondAttribute="centerX" id="b75-Aq-Lda"/>
+                            <constraint firstItem="XiK-wi-oEB" firstAttribute="bottom" secondItem="0Vd-xo-qY9" secondAttribute="bottom" constant="20" id="dlT-5w-RYN"/>
+                            <constraint firstItem="XiK-wi-oEB" firstAttribute="trailing" secondItem="0Vd-xo-qY9" secondAttribute="trailing" constant="16" id="iIY-qy-saY"/>
+                            <constraint firstItem="Wns-fz-5sg" firstAttribute="trailing" secondItem="XiK-wi-oEB" secondAttribute="trailing" id="mH1-tP-nPC"/>
+                            <constraint firstItem="I3Y-1h-b9f" firstAttribute="centerY" secondItem="Wns-fz-5sg" secondAttribute="centerY" id="smd-zC-olM"/>
+                            <constraint firstItem="Wns-fz-5sg" firstAttribute="top" secondItem="HgO-oE-Q8P" secondAttribute="top" id="tr0-gC-Ike"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="I3Y-1h-b9f" id="Kst-ii-uvA"/>
+                        <outlet property="getImageButton" destination="Lqw-fB-1ZV" id="I9i-Wu-ZkB"/>
+                        <outlet property="imageView" destination="Wns-fz-5sg" id="Nja-en-FZ3"/>
+                        <outlet property="label" destination="0Vd-xo-qY9" id="Cth-mj-jkU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JK2-6b-3V8" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
