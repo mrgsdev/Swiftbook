@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  CollectionViewController.swift
 //  ImageApp
 //
 //  Created by mrgsdev on 12.03.2024.
@@ -7,55 +7,55 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+enum Actions: String, CaseIterable {
     
-    @IBAction func getRequest(_ sender: Any) {
-        
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
-        
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            
-            guard let response, let data else { return }
-            
-            print("response \(response)")
-            print("data \(data)")
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print("json \(json)")
-            } catch {
-                print("error \(error)")
-            }
-        }.resume()
+    case downloadImage = "Download Image"
+    case get = "GET"
+    case post = "POST"
+    case ourCourses = "Our Courses"
+    case uploadImage = "Upload Image"
+}
+
+private let reuseIdentifier = "Cell"
+private let url = "https://jsonplaceholder.typicode.com/posts"
+
+class MainViewController: UICollectionViewController {
+    
+    let actions = Actions.allCases
+
+
+    // MARK: UICollectionViewDataSource
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return actions.count
     }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
     
-    @IBAction func postRequest(_ sender: Any) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        cell.label.text = actions[indexPath.row].rawValue
+    
+        return cell
+    }
+
+    // MARK: UICollectionViewDelegate
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let userData = ["Course": "Networking", "Lesson": "GET and POST"]
+        let action = actions[indexPath.row]
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
-        request.httpBody = httpBody
-        
-        let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
-            
-            guard let response, let data else { return }
-            
-            print("response POST \(response)")
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print("json  POST \(json)")
-            } catch {
-                print("error POST \(error)")
-            }
-        } .resume()
+        switch action {
+        case .downloadImage:
+            performSegue(withIdentifier: "ShowImage", sender: self)
+        case .get:
+            NetworkManager.getRequest(url: url)
+        case .post:
+            NetworkManager.postRequest(url: url)
+        case .ourCourses:
+            performSegue(withIdentifier: "OurCourses", sender: self)
+        case .uploadImage:
+            print("Upload Image")
+        }
     }
 
 }
