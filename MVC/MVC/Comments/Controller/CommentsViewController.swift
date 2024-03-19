@@ -9,30 +9,36 @@ import UIKit
 
 class CommentsViewController: UIViewController {
     
-
+     
     @IBOutlet weak var tableView: UITableView!
-    
+    var comments = [Comment]()
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        super.viewDidLoad()
         view.backgroundColor = .red
+        CommentNetworkService.getComments { (response) in
+            self.comments = response.comments
+            
+        }
     }
 
 
 }
 
 
-extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
+extension CommentsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel?.text = "indexPath.row"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)  as! CommentCell
+        let comment = comments[indexPath.row]
+        cell.configure(with: comment)
+        self.tableView.reloadData()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return comments.count
+    }
 }
+
+extension CommentsViewController: UITableViewDelegate{}

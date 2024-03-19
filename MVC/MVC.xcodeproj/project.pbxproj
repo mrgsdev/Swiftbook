@@ -13,6 +13,12 @@
 		42C2B6EB2BA9AD31004D1A67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B6EA2BA9AD31004D1A67 /* Base */; };
 		42C2B6ED2BA9AD32004D1A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B6EC2BA9AD32004D1A67 /* Assets.xcassets */; };
 		42C2B6F02BA9AD32004D1A67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B6EF2BA9AD32004D1A67 /* Base */; };
+		42C2B7012BA9B1F8004D1A67 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B7002BA9B1F8004D1A67 /* CommentCell.swift */; };
+		42C2B7032BA9B25F004D1A67 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B7022BA9B25F004D1A67 /* Comment.swift */; };
+		42C2B7062BA9B454004D1A67 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B7052BA9B454004D1A67 /* NetworkService.swift */; };
+		42C2B7092BA9B5E1004D1A67 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B7082BA9B5E1004D1A67 /* CommentNetworkService.swift */; };
+		42C2B70B2BA9B664004D1A67 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B70A2BA9B664004D1A67 /* NetworkError.swift */; };
+		42C2B70E2BA9B681004D1A67 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2B70D2BA9B681004D1A67 /* GetCommentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		42C2B6EC2BA9AD32004D1A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C2B6EF2BA9AD32004D1A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42C2B6F12BA9AD32004D1A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C2B7002BA9B1F8004D1A67 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		42C2B7022BA9B25F004D1A67 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		42C2B7052BA9B454004D1A67 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		42C2B7082BA9B5E1004D1A67 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
+		42C2B70A2BA9B664004D1A67 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		42C2B70D2BA9B681004D1A67 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 		42C2B6F72BA9AEA3004D1A67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B70A2BA9B664004D1A67 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,6 +95,7 @@
 		42C2B6F92BA9AEAB004D1A67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B6E32BA9AD31004D1A67 /* AppDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,7 +106,7 @@
 				42C2B6F72BA9AEA3004D1A67 /* Model */,
 				42C2B6F82BA9AEA7004D1A67 /* View */,
 				42C2B6F92BA9AEAB004D1A67 /* Controller */,
-				42C2B6E32BA9AD31004D1A67 /* AppDelegate.swift */,
+				42C2B7042BA9B43E004D1A67 /* NetworkService */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -100,6 +114,7 @@
 		42C2B6FB2BA9AED3004D1A67 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B7072BA9B5CD004D1A67 /* CommentNetworkService */,
 				42C2B6FE2BA9AEE7004D1A67 /* Model */,
 				42C2B6FD2BA9AEE3004D1A67 /* View */,
 				42C2B6FC2BA9AEDD004D1A67 /* Controller */,
@@ -118,6 +133,7 @@
 		42C2B6FD2BA9AEE3004D1A67 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B7002BA9B1F8004D1A67 /* CommentCell.swift */,
 				42C2B6E92BA9AD31004D1A67 /* Main.storyboard */,
 			);
 			path = View;
@@ -126,6 +142,8 @@
 		42C2B6FE2BA9AEE7004D1A67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B70C2BA9B678004D1A67 /* Responses */,
+				42C2B7022BA9B25F004D1A67 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +155,30 @@
 				42C2B6F12BA9AD32004D1A67 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C2B7042BA9B43E004D1A67 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				42C2B7052BA9B454004D1A67 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		42C2B7072BA9B5CD004D1A67 /* CommentNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				42C2B7082BA9B5E1004D1A67 /* CommentNetworkService.swift */,
+			);
+			path = CommentNetworkService;
+			sourceTree = "<group>";
+		};
+		42C2B70C2BA9B678004D1A67 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				42C2B70D2BA9B681004D1A67 /* GetCommentResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C2B7032BA9B25F004D1A67 /* Comment.swift in Sources */,
+				42C2B70B2BA9B664004D1A67 /* NetworkError.swift in Sources */,
 				42C2B6E82BA9AD31004D1A67 /* CommentsViewController.swift in Sources */,
 				42C2B6E42BA9AD31004D1A67 /* AppDelegate.swift in Sources */,
 				42C2B6E62BA9AD31004D1A67 /* SceneDelegate.swift in Sources */,
+				42C2B7062BA9B454004D1A67 /* NetworkService.swift in Sources */,
+				42C2B7012BA9B1F8004D1A67 /* CommentCell.swift in Sources */,
+				42C2B7092BA9B5E1004D1A67 /* CommentNetworkService.swift in Sources */,
+				42C2B70E2BA9B681004D1A67 /* GetCommentResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
