@@ -37,4 +37,8 @@ extension UIColor {
     static func buttonDark() -> UIColor {
         return UIColor(hex: 0x333333)
     }
+    
+    static func textFieldLight() -> UIColor {
+        return UIColor(hex: 0xE6E6E6)
+    }
 }

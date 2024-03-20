@@ -30,7 +30,11 @@ class AuthViewController: UIViewController {
         setupConstraints()
     }
     
-    private func setupConstraints()  {
+}
+//MARK: - Setup Constraints
+
+extension AuthViewController {
+    private func setupConstraints() {
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)
         let loginView = ButtonFormView(label: alreadyOnboardLabel, button: loginButton)
@@ -50,13 +54,8 @@ class AuthViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
-        
-        
     }
-    
 }
-
-
 
 // MARK: - SwiftUI Preview
 import SwiftUI
