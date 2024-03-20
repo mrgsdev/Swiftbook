@@ -9,10 +9,10 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    let logoImageView = UIImageView(image:UIImage(named:  .logo.rawValue), contentMode: .scaleAspectFit)
-
+    let logoImageView = UIImageView(image: .logo, contentMode: .scaleAspectFit)
+    
     let googleLabel = UILabel(text: "Get started with")
-
+    
     let emailLabel = UILabel(text: "or sign up with")
     
     let alreadyOnboardLabel = UILabel(text: "Already onboard")
@@ -23,13 +23,36 @@ class AuthViewController: UIViewController {
     
     let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadow: true)
     
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainWhite()
-        view.addSubview(emailButton)
+        view.backgroundColor = .white
+        setupConstraints()
     }
     
+    private func setupConstraints()  {
+        let googleView = ButtonFormView(label: googleLabel, button: googleButton)
+        let emailView = ButtonFormView(label: emailLabel, button: emailButton)
+        let loginView = ButtonFormView(label: alreadyOnboardLabel, button: loginButton)
+        
+        let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView],
+                                    axis: .vertical, spacing: 40)
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoImageView)
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 160),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+        ])
+        
+        
+    }
     
 }
 

@@ -17,6 +17,8 @@
 		424EA8D52BAAE7CC00988A09 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8D42BAAE7CC00988A09 /* UIColor+Ext.swift */; };
 		424EA8D72BAAE96D00988A09 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8D62BAAE96D00988A09 /* UILabel+Ext.swift */; };
 		424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8D82BAAE9F500988A09 /* UIImageView+Ext.swift */; };
+		424EA8DD2BAAEDC800988A09 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8DC2BAAEDC800988A09 /* ButtonFormView.swift */; };
+		424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8DE2BAAF06600988A09 /* UIStackView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		424EA8D42BAAE7CC00988A09 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		424EA8D62BAAE96D00988A09 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		424EA8D82BAAE9F500988A09 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		424EA8DC2BAAEDC800988A09 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		424EA8DE2BAAF06600988A09 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,7 @@
 		424EA8BB2BAAE33900988A09 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				424EA8D82BAAE9F500988A09 /* UIImageView+Ext.swift */,
-				424EA8D62BAAE96D00988A09 /* UILabel+Ext.swift */,
-				424EA8D42BAAE7CC00988A09 /* UIColor+Ext.swift */,
-				424EA8D22BAAE70A00988A09 /* UIFont+Ext.swift */,
-				424EA8D02BAAE5C100988A09 /* UIButton+Ext.swift */,
+				424EA8DB2BAAEBC200988A09 /* Extensions */,
 				424EA8BC2BAAE33900988A09 /* AppDelegate.swift */,
 				424EA8BE2BAAE33900988A09 /* SceneDelegate.swift */,
 				424EA8C02BAAE33900988A09 /* AuthViewController.swift */,
@@ -77,6 +77,28 @@
 				424EA8CA2BAAE33A00988A09 /* Info.plist */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		424EA8DA2BAAEBB600988A09 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				424EA8DC2BAAEDC800988A09 /* ButtonFormView.swift */,
+				424EA8DE2BAAF06600988A09 /* UIStackView+Ext.swift */,
+				424EA8D82BAAE9F500988A09 /* UIImageView+Ext.swift */,
+				424EA8D62BAAE96D00988A09 /* UILabel+Ext.swift */,
+				424EA8D42BAAE7CC00988A09 /* UIColor+Ext.swift */,
+				424EA8D22BAAE70A00988A09 /* UIFont+Ext.swift */,
+				424EA8D02BAAE5C100988A09 /* UIButton+Ext.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		424EA8DB2BAAEBC200988A09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				424EA8DA2BAAEBB600988A09 /* UIKit */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
+				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
 				424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */,
 				424EA8BD2BAAE33900988A09 /* AppDelegate.swift in Sources */,
+				424EA8DD2BAAEDC800988A09 /* ButtonFormView.swift in Sources */,
 				424EA8BF2BAAE33900988A09 /* SceneDelegate.swift in Sources */,
 				424EA8D52BAAE7CC00988A09 /* UIColor+Ext.swift in Sources */,
 				424EA8D12BAAE5C100988A09 /* UIButton+Ext.swift in Sources */,
