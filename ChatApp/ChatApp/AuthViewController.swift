@@ -23,6 +23,8 @@ class AuthViewController: UIViewController {
     
     let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadow: true)
     
+    let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(),cornerRadius: 4)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
