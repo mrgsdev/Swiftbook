@@ -28,6 +28,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainWhite()
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
         setupConstraints()
     }
     
