@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */; };
+		424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518F2BAC2A11001DA576 /* AddPhotoView.swift */; };
 		424EA8BD2BAAE33900988A09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8BC2BAAE33900988A09 /* AppDelegate.swift */; };
 		424EA8BF2BAAE33900988A09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8BE2BAAE33900988A09 /* SceneDelegate.swift */; };
 		424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8C02BAAE33900988A09 /* AuthViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		4241518F2BAC2A11001DA576 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		424EA8B92BAAE33900988A09 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424EA8BC2BAAE33900988A09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		424EA8BE2BAAE33900988A09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				424EA8C02BAAE33900988A09 /* AuthViewController.swift */,
 				424EA8E02BAAF25400988A09 /* SignUpViewController.swift */,
 				424EA8E42BAB282700988A09 /* LoginViewController.swift */,
+				4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */,
+				4241518F2BAC2A11001DA576 /* AddPhotoView.swift */,
 				424EA8C52BAAE33A00988A09 /* Assets.xcassets */,
 				424EA8C72BAAE33A00988A09 /* LaunchScreen.storyboard */,
 				424EA8CA2BAAE33A00988A09 /* Info.plist */,
@@ -184,8 +190,10 @@
 				424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */,
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
 				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
+				4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */,
 				424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */,
 				424EA8BD2BAAE33900988A09 /* AppDelegate.swift in Sources */,
+				424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */,
 				424EA8DD2BAAEDC800988A09 /* ButtonFormView.swift in Sources */,
 				424EA8BF2BAAE33900988A09 /* SceneDelegate.swift in Sources */,
 				424EA8D52BAAE7CC00988A09 /* UIColor+Ext.swift in Sources */,
