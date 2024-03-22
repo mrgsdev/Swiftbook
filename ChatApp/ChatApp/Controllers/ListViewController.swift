@@ -8,15 +8,16 @@
 import UIKit
 
 class ListViewController: UIViewController {
-
+    
+    var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        navigationController?.navigationBar.backgroundColor = .white
-        setupSearchBar()
         
-        // Do any additional setup after loading the view.
+        setupSearchBar()
+        setupCollectionView()
     }
+    
     private func setupSearchBar() {
         navigationController?.navigationBar.barTintColor = .mainWhite()
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -28,18 +29,53 @@ class ListViewController: UIViewController {
         searchController.searchBar.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupCollectionView() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.backgroundColor = .mainWhite()
+        view.addSubview(collectionView)
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
-    */
-
+    
+    private func createCompositionalLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (senctionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                  heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                   heightDimension: .absolute(84))
+            let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+            group.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
+            return section
+        }
+        return layout
+    }
 }
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
+        cell.backgroundColor = .red
+        cell.layer.borderWidth = 1
+        return cell
+    }
+}
+
+
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
