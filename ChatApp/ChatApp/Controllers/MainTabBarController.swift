@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController {
         let peopleVC = PeopleViewController()
         let listVC = ListViewController()
         tabBar.tintColor = UIColor(hex: 0x8E5AF7)
-        tabBar.isTranslucent = false 
+        tabBar.isTranslucent = false
         tabBar.backgroundColor = .white
         let boldConfig = UIImage.SymbolConfiguration(weight: .medium)
         let convImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfig)!
