@@ -83,21 +83,19 @@ extension SetupProfileViewController {
 // MARK: - SwiftUI
 import SwiftUI
 
-struct SetupProfileVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
+struct VCRepresentable: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return SetupProfileViewController()
     }
     
-    struct ContainerView: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
-        let setupProfileVC = SetupProfileViewController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<SetupProfileVCProvider.ContainerView>) -> SetupProfileViewController {
-            return setupProfileVC
-        }
-        
-        func updateUIViewController(_ uiViewController: SetupProfileVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<SetupProfileVCProvider.ContainerView>) {
-            
-        }
+    }
+}
+
+struct VC_Preview: PreviewProvider {
+    static var previews: some View {
+        VCRepresentable()
     }
 }
