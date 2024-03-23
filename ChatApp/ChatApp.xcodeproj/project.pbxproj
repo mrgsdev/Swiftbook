@@ -31,6 +31,7 @@
 		42BBBAD92BAE85FD00F0A580 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBBAD82BAE85FD00F0A580 /* Bundle-Decodable.swift */; };
 		42BBBADC2BAE861100F0A580 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 42BBBADA2BAE861100F0A580 /* activeChats.json */; };
 		42BBBADD2BAE861100F0A580 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 42BBBADB2BAE861100F0A580 /* waitingChats.json */; };
+		42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		42BBBAD82BAE85FD00F0A580 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		42BBBADA2BAE861100F0A580 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		42BBBADB2BAE861100F0A580 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				4298B6E22BAD77A600A094FC /* MainTabBarController.swift */,
 				4298B6E92BAD789900A094FC /* PeopleViewController.swift */,
 				4298B6E62BAD782900A094FC /* ListViewController.swift */,
+				42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */,
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
 				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
+				42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */,
 				4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */,
 				4298B6EA2BAD789900A094FC /* PeopleViewController.swift in Sources */,
 				424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */,
