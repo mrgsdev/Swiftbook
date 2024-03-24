@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4212DD132BB0321200D26343 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD122BB0321200D26343 /* GradientView.swift */; };
+		4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD142BB032F300D26343 /* WaitingChatCell.swift */; };
 		4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */; };
 		424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518F2BAC2A11001DA576 /* AddPhotoView.swift */; };
 		424151922BAC2B09001DA576 /* UISegmentedControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		4212DD122BB0321200D26343 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4212DD142BB032F300D26343 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4241518F2BAC2A11001DA576 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Ext.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				4298B6E92BAD789900A094FC /* PeopleViewController.swift */,
 				4298B6E62BAD782900A094FC /* ListViewController.swift */,
 				42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */,
+				4212DD142BB032F300D26343 /* WaitingChatCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				424EA8BF2BAAE33900988A09 /* SceneDelegate.swift in Sources */,
 				424151922BAC2B09001DA576 /* UISegmentedControl+Ext.swift in Sources */,
 				424EA8D52BAAE7CC00988A09 /* UIColor+Ext.swift in Sources */,
+				4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */,
 				424EA8D12BAAE5C100988A09 /* UIButton+Ext.swift in Sources */,
 				4298B6E72BAD782900A094FC /* ListViewController.swift in Sources */,
 				424EA8D32BAAE70A00988A09 /* UIFont+Ext.swift in Sources */,
