@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4212DD132BB0321200D26343 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD122BB0321200D26343 /* GradientView.swift */; };
 		4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */; };
 		424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518F2BAC2A11001DA576 /* AddPhotoView.swift */; };
 		424151922BAC2B09001DA576 /* UISegmentedControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4212DD122BB0321200D26343 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4241518F2BAC2A11001DA576 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Ext.swift"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				42BBBADE2BAE861A00F0A580 /* JSON FakeData */,
 				424EA8DA2BAAEBB600988A09 /* UIKit */,
+				4212DD122BB0321200D26343 /* GradientView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				424EA8E32BAAF3BA00988A09 /* OneLineTextField.swift in Sources */,
 				424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */,
+				4212DD132BB0321200D26343 /* GradientView.swift in Sources */,
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
 				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
 				42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */,
