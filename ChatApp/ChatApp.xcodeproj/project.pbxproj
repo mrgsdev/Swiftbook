@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4212DD132BB0321200D26343 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD122BB0321200D26343 /* GradientView.swift */; };
 		4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD142BB032F300D26343 /* WaitingChatCell.swift */; };
+		4212DD1B2BB0341200D26343 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */; };
+		4212DD1E2BB0345600D26343 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD1D2BB0345600D26343 /* SectionHeader.swift */; };
 		4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */; };
 		424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4241518F2BAC2A11001DA576 /* AddPhotoView.swift */; };
 		424151922BAC2B09001DA576 /* UISegmentedControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		4212DD122BB0321200D26343 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4212DD142BB032F300D26343 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		4212DD1D2BB0345600D26343 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		4241518D2BAC29E7001DA576 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4241518F2BAC2A11001DA576 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		424151912BAC2B09001DA576 /* UISegmentedControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Ext.swift"; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4212DD1C2BB0342700D26343 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		424EA8B02BAAE33900988A09 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4298B6E82BAD782E00A094FC /* Application */,
+				4212DD1C2BB0342700D26343 /* Protocols */,
 				4298B6E52BAD781A00A094FC /* Controllers */,
 				424EA8DB2BAAEBC200988A09 /* Extensions */,
 				4298B6E42BAD77BE00A094FC /* SignUp&Auth */,
@@ -156,6 +169,7 @@
 				4298B6E62BAD782900A094FC /* ListViewController.swift */,
 				42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */,
 				4212DD142BB032F300D26343 /* WaitingChatCell.swift */,
+				4212DD1D2BB0345600D26343 /* SectionHeader.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 			files = (
 				424EA8E32BAAF3BA00988A09 /* OneLineTextField.swift in Sources */,
 				424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */,
+				4212DD1E2BB0345600D26343 /* SectionHeader.swift in Sources */,
 				4212DD132BB0321200D26343 /* GradientView.swift in Sources */,
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
 				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
@@ -267,6 +282,7 @@
 				424EA8BF2BAAE33900988A09 /* SceneDelegate.swift in Sources */,
 				424151922BAC2B09001DA576 /* UISegmentedControl+Ext.swift in Sources */,
 				424EA8D52BAAE7CC00988A09 /* UIColor+Ext.swift in Sources */,
+				4212DD1B2BB0341200D26343 /* SelfConfiguringCell.swift in Sources */,
 				4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */,
 				424EA8D12BAAE5C100988A09 /* UIButton+Ext.swift in Sources */,
 				4298B6E72BAD782900A094FC /* ListViewController.swift in Sources */,
