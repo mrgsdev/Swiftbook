@@ -29,6 +29,8 @@
 		424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8E02BAAF25400988A09 /* SignUpViewController.swift */; };
 		424EA8E32BAAF3BA00988A09 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8E22BAAF3BA00988A09 /* OneLineTextField.swift */; };
 		424EA8E52BAB282700988A09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EA8E42BAB282700988A09 /* LoginViewController.swift */; };
+		426299452BB16EA000D7E26B /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426299442BB16EA000D7E26B /* MUser.swift */; };
+		426299472BB16F0300D7E26B /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 426299462BB16F0300D7E26B /* users.json */; };
 		4298B6E32BAD77A600A094FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298B6E22BAD77A600A094FC /* MainTabBarController.swift */; };
 		4298B6E72BAD782900A094FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298B6E62BAD782900A094FC /* ListViewController.swift */; };
 		4298B6EA2BAD789900A094FC /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298B6E92BAD789900A094FC /* PeopleViewController.swift */; };
@@ -63,6 +65,8 @@
 		424EA8E02BAAF25400988A09 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		424EA8E22BAAF3BA00988A09 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		424EA8E42BAB282700988A09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		426299442BB16EA000D7E26B /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		426299462BB16F0300D7E26B /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		4298B6E22BAD77A600A094FC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4298B6E62BAD782900A094FC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4298B6E92BAD789900A094FC /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 		424EA8BB2BAAE33900988A09 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				426299462BB16F0300D7E26B /* users.json */,
+				426299442BB16EA000D7E26B /* MUser.swift */,
 				4298B6E82BAD782E00A094FC /* Application */,
 				4212DD1C2BB0342700D26343 /* Protocols */,
 				4298B6E52BAD781A00A094FC /* Controllers */,
@@ -250,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426299472BB16F0300D7E26B /* users.json in Resources */,
 				424EA8C62BAAE33A00988A09 /* Assets.xcassets in Resources */,
 				42BBBADC2BAE861100F0A580 /* activeChats.json in Resources */,
 				424EA8C92BAAE33A00988A09 /* Base in Resources */,
@@ -270,6 +277,7 @@
 				4212DD132BB0321200D26343 /* GradientView.swift in Sources */,
 				424EA8D92BAAE9F500988A09 /* UIImageView+Ext.swift in Sources */,
 				424EA8DF2BAAF06600988A09 /* UIStackView+Ext.swift in Sources */,
+				426299452BB16EA000D7E26B /* MUser.swift in Sources */,
 				42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */,
 				4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */,
 				4298B6EA2BAD789900A094FC /* PeopleViewController.swift in Sources */,
