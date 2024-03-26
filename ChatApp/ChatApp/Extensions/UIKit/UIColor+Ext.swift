@@ -41,4 +41,10 @@ extension UIColor {
     static func textFieldLight() -> UIColor {
         return UIColor(hex: 0xE6E6E6)
     }
+    
+    static func shadown() -> UIColor {
+        return UIColor(hex: 0x7AB2EB)
+    }
+    
+   
 }

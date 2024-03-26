@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     let imageView = UIImageView(image: .humanTwo, contentMode: .scaleAspectFill)
     let nameLabel = UILabel(text: "Peter Ben", font: .systemFont(ofSize: 20, weight: .light))
     let aboutMeLabel = UILabel(text: "You have the opportunity to chat with the best man in the world!", font: .systemFont(ofSize: 16, weight: .light))
-    let myTextField = UITextField()
+    let myTextField = InsertableTextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()

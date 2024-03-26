@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4206B29A2BB2ABF40098CE32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206B2992BB2ABF40098CE32 /* ProfileViewController.swift */; };
+		4206B29C2BB2AD150098CE32 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206B29B2BB2AD150098CE32 /* InsertableTextField.swift */; };
+		4206B29E2BB2AD550098CE32 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206B29D2BB2AD550098CE32 /* UIView+ext.swift */; };
 		4212DD132BB0321200D26343 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD122BB0321200D26343 /* GradientView.swift */; };
 		4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD142BB032F300D26343 /* WaitingChatCell.swift */; };
 		4212DD1B2BB0341200D26343 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		4206B2992BB2ABF40098CE32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4206B29B2BB2AD150098CE32 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		4206B29D2BB2AD550098CE32 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 		4212DD122BB0321200D26343 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4212DD142BB032F300D26343 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				424EA8D02BAAE5C100988A09 /* UIButton+Ext.swift */,
 				42BBBAD82BAE85FD00F0A580 /* Bundle-Decodable.swift */,
 				4262994F2BB171E900D7E26B /* UIViewController + Extension.swift */,
+				4206B29B2BB2AD150098CE32 /* InsertableTextField.swift */,
+				4206B29D2BB2AD550098CE32 /* UIView+ext.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4206B29E2BB2AD550098CE32 /* UIView+ext.swift in Sources */,
 				424EA8E32BAAF3BA00988A09 /* OneLineTextField.swift in Sources */,
 				424EA8E12BAAF25400988A09 /* SignUpViewController.swift in Sources */,
 				4212DD1E2BB0345600D26343 /* SectionHeader.swift in Sources */,
@@ -317,6 +324,7 @@
 				426299452BB16EA000D7E26B /* MUser.swift in Sources */,
 				42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */,
 				4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */,
+				4206B29C2BB2AD150098CE32 /* InsertableTextField.swift in Sources */,
 				4298B6EA2BAD789900A094FC /* PeopleViewController.swift in Sources */,
 				424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */,
 				4206B29A2BB2ABF40098CE32 /* ProfileViewController.swift in Sources */,
