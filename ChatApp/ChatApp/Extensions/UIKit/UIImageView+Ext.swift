@@ -26,5 +26,6 @@ extension UIImage {
         case plus = "plus"
         case sent = "Sent"
         case tabBarLogo = "tabBarLogo"
+        case humanTwo = "human2"
     }
 }

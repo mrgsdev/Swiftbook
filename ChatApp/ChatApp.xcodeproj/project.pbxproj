@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4206B29A2BB2ABF40098CE32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206B2992BB2ABF40098CE32 /* ProfileViewController.swift */; };
 		4212DD132BB0321200D26343 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD122BB0321200D26343 /* GradientView.swift */; };
 		4212DD152BB032F300D26343 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD142BB032F300D26343 /* WaitingChatCell.swift */; };
 		4212DD1B2BB0341200D26343 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4206B2992BB2ABF40098CE32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4212DD122BB0321200D26343 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		4212DD142BB032F300D26343 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		4212DD1A2BB0341200D26343 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				4298B6E22BAD77A600A094FC /* MainTabBarController.swift */,
 				4298B6E92BAD789900A094FC /* PeopleViewController.swift */,
 				4298B6E62BAD782900A094FC /* ListViewController.swift */,
+				4206B2992BB2ABF40098CE32 /* ProfileViewController.swift */,
 				4262994D2BB1711700D7E26B /* Cells */,
 				4262994E2BB1712A00D7E26B /* Header */,
 			);
@@ -316,6 +319,7 @@
 				4241518E2BAC29E7001DA576 /* SetupProfileViewController.swift in Sources */,
 				4298B6EA2BAD789900A094FC /* PeopleViewController.swift in Sources */,
 				424EA8C12BAAE33900988A09 /* AuthViewController.swift in Sources */,
+				4206B29A2BB2ABF40098CE32 /* ProfileViewController.swift in Sources */,
 				42BBBAD92BAE85FD00F0A580 /* Bundle-Decodable.swift in Sources */,
 				424EA8BD2BAAE33900988A09 /* AppDelegate.swift in Sources */,
 				424151902BAC2A11001DA576 /* AddPhotoView.swift in Sources */,
