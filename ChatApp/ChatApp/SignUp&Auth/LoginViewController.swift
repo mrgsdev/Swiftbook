@@ -30,6 +30,19 @@ class LoginViewController: UIViewController {
         googleButton.customizeGoogleButton()
         view.backgroundColor = .mainWhite()
         setupConstraints()
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func loginButtonTapped() {
+        AuthService.shared.login(email: emailTextField.text!,
+                                 password: passwordTextField.text!) { (result) in
+                                    switch result {
+                                    case .success(_):
+                                        self.showAlert(with: "Успешно!", and: "Вы авторизованы!")
+                                    case .failure(let error):
+                                        self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+                                    }
+        }
     }
      
 }

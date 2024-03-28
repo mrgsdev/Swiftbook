@@ -46,6 +46,7 @@
 		42BBBADD2BAE861100F0A580 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 42BBBADB2BAE861100F0A580 /* waitingChats.json */; };
 		42BBBAE22BAE86C700F0A580 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */; };
 		42D7D18D2BB5867B002E9224 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42D7D18C2BB5867B002E9224 /* GoogleService-Info.plist */; };
+		42EC41912BB58EA7004DBFCE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC41902BB58EA7004DBFCE /* AuthService.swift */; };
 		E83B8B905970F6D88794E555 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3BF9658C94E055048D9A4F /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		42BBBADB2BAE861100F0A580 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		42BBBAE12BAE86C700F0A580 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		42D7D18C2BB5867B002E9224 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42EC41902BB58EA7004DBFCE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7E8B8D9EB2071D293B8A19FF /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		8B3BF9658C94E055048D9A4F /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD212017B05D72B2583F75B5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		424EA8BB2BAAE33900988A09 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				42EC418F2BB58E9C004DBFCE /* Services */,
 				4298B6E82BAD782E00A094FC /* Application */,
 				4262994C2BB170F600D7E26B /* Model */,
 				4212DD1C2BB0342700D26343 /* Protocols */,
@@ -261,13 +264,20 @@
 			path = "JSON FakeData";
 			sourceTree = "<group>";
 		};
+		42EC418F2BB58E9C004DBFCE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				42EC41902BB58EA7004DBFCE /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4B632420A7D6CA73A271A4AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				AD212017B05D72B2583F75B5 /* Pods-ChatApp.debug.xcconfig */,
 				7E8B8D9EB2071D293B8A19FF /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -420,6 +430,7 @@
 				4298B6E72BAD782900A094FC /* ListViewController.swift in Sources */,
 				424EA8D32BAAE70A00988A09 /* UIFont+Ext.swift in Sources */,
 				424EA8E52BAB282700988A09 /* LoginViewController.swift in Sources */,
+				42EC41912BB58EA7004DBFCE /* AuthService.swift in Sources */,
 				424EA8D72BAAE96D00988A09 /* UILabel+Ext.swift in Sources */,
 				4262994B2BB170D700D7E26B /* MChat.swift in Sources */,
 			);
@@ -567,6 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y2Y34S7QM3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -595,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y2Y34S7QM3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
