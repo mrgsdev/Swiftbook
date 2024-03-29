@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
     let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(),cornerRadius: 4)
     let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .clear)
     
-    
+    weak var delegate: AuthNavigationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,8 @@ class SignUpViewController: UIViewController {
         confirmPasswordTextField.isSecureTextEntry = true
         setupConstraints()
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc private func signUpButtonTapped() {
@@ -41,10 +43,19 @@ class SignUpViewController: UIViewController {
                                         switch result {
                                             
                                         case .success(let user):
-                                            self.showAlert(with: "Успешно!", and: "ВЫ зарегистрированны!")
+                                            self.showAlert(with: "Успешно!", and: "Вы зарегистрированны!") {
+                                                self.present(SetupProfileViewController(), animated: true, completion: nil)
+                                            }
+                                     
                                         case .failure(let error):
                                             self.showAlert(with: "Ошибка!", and: error.localizedDescription)
                                         }
+        }
+        
+    }
+    @objc private func loginButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toLoginVC()
         }
         
     }
@@ -74,7 +85,7 @@ extension SignUpViewController {
         view.addSubview(bottomStackView)
         
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
@@ -85,7 +96,7 @@ extension SignUpViewController {
         ])
         
         NSLayoutConstraint.activate([
-            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
@@ -95,9 +106,11 @@ extension SignUpViewController {
 
 extension UIViewController {
     
-    func showAlert(with title: String, and message: String) {
+    func showAlert(with title: String, and message: String, completion: @escaping () -> Void = { }) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            completion()
+        }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
