@@ -7,10 +7,7 @@
 
 import UIKit
 
-protocol AuthNavigationDelegate: class {
-    func toLoginVC()
-    func toSignUpVC()
-}
+
 
 
 class LoginViewController: UIViewController {
@@ -30,7 +27,7 @@ class LoginViewController: UIViewController {
      
     let signUpButton = UIButton(title: "Sign Up", titleColor: .buttonRed(), backgroundColor: .clear)
     
-    weak var delegate: AuthNavigationDelegate?
+    weak var delegate: AuthNavigatingDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.isSecureTextEntry = true

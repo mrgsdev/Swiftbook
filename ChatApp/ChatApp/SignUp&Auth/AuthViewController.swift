@@ -75,7 +75,7 @@ extension AuthViewController {
 }
 
 
-extension AuthViewController: AuthNavigationDelegate{
+extension AuthViewController: AuthNavigatingDelegate{
     func toLoginVC() {
         present(loginVC, animated: true)
     }
