@@ -158,9 +158,8 @@
 		424EA8BB2BAAE33900988A09 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				42D8F99D2BB6EC7B00C81358 /* Helpers */,
-				42EC418F2BB58E9C004DBFCE /* Services */,
 				4298B6E82BAD782E00A094FC /* Application */,
+				42EC418F2BB58E9C004DBFCE /* Services */,
 				4212DD1C2BB0342700D26343 /* Protocols */,
 				4298B6E52BAD781A00A094FC /* Controllers */,
 				4298B6E42BAD77BE00A094FC /* SignUp&Auth */,
@@ -169,6 +168,7 @@
 				424EA8C72BAAE33A00988A09 /* LaunchScreen.storyboard */,
 				424EA8CA2BAAE33A00988A09 /* Info.plist */,
 				42D7D18C2BB5867B002E9224 /* GoogleService-Info.plist */,
+				42D8F99D2BB6EC7B00C81358 /* Helpers */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -289,8 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				4262994C2BB170F600D7E26B /* Model */,
-				42D8F9992BB6EB4200C81358 /* FirestoreService.swift */,
 				42EC41902BB58EA7004DBFCE /* AuthService.swift */,
+				42D8F9992BB6EB4200C81358 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

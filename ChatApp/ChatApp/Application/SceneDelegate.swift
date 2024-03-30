@@ -6,19 +6,33 @@
 //
 
 import UIKit
-
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowsScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: windowsScene.coordinateSpace.bounds)
-        window?.windowScene = windowsScene
-        window?.rootViewController = AuthViewController()
-        window?.makeKeyAndVisible() 
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
         
+        
+        if let user = Auth.auth().currentUser {
+            FirestoreService.shared.getUserData(user: user) { (result) in
+                switch result {
+                case .success(let muser):
+                    self.window?.rootViewController = MainTabBarController()
+                case .failure(_):
+                    self.window?.rootViewController = AuthViewController()
+                }
+            }
+        } else {
+            window?.rootViewController = AuthViewController()
+        }
+        window?.makeKeyAndVisible()
     }
 
      

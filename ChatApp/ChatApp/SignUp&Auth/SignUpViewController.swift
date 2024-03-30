@@ -64,7 +64,7 @@ class SignUpViewController: UIViewController {
         }
     }
 }
-// MARK: - Setup constraints 
+// MARK: - Setup constraints
 extension SignUpViewController {
     private func setupConstraints() {
         let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)

@@ -4,10 +4,9 @@
 //
 //  Created by mrgsdev on 26.03.2024.
 //
-
-import Foundation
+ 
 import UIKit
-
+import FirebaseAuth
 class ProfileViewController: UIViewController {
     
     let containerView = UIView()  
@@ -22,8 +21,22 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
         constomizeElements()
         setupConstraints()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
     }
-    
+    @objc private func signOut() {
+        let ac = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { (_) in
+            do {
+                try Auth.auth().signOut()
+                UIApplication.shared.keyWindow?.rootViewController = AuthViewController()
+            } catch {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+        }))
+        present(ac, animated: true, completion: nil)
+    }
     private func constomizeElements() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
