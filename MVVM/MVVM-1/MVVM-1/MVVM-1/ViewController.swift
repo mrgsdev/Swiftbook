@@ -13,20 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondName: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     
-    var profile: Profile? {
+    var viewModel:ViewModel! {
         didSet{
-            guard let profile else {
-          return
-            }
-            self.nameLabel.text = profile.name
-            self.secondName.text = profile.secondName
-            self.ageLabel.text = "\(profile.age)"
+            self.nameLabel.text = viewModel?.name
+            self.secondName.text = viewModel?.secondName
+            self.ageLabel.text = viewModel?.age
         }
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        profile = Profile(name: "John", secondName: "Smith", age: 2)
+        view.backgroundColor = .red
+        viewModel = ViewModel()
+       
         
     }
 
