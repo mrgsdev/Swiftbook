@@ -15,7 +15,7 @@ class ViewModel:TableViewViewModelType {
         Profile(name: "Mark", secondName: "Salmon", age: 52)
     ]
     
-    var numberOfRows: Int {
+   func numberOfRows() -> Int{
         return profiles.count
     }
     

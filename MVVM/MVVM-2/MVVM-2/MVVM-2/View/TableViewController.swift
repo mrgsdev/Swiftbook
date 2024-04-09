@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         guard let viewModel else { return 0 }
-        return  viewModel.numberOfRows
+        return  viewModel.numberOfRows()
     }
 
  
