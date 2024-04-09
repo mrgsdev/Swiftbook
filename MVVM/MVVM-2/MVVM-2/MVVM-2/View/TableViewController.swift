@@ -33,6 +33,21 @@ class TableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard (viewModel != nil) else { return }
+        viewModel?.selectRow(forIndexPath: indexPath)
+        performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let viewModel = viewModel else { return }
+        
+        if identifier == "detailSegue" {
+            if let dvc = segue.destination as? DetailViewController {
+                dvc.viewModel = viewModel.viewModelForSelectedRow()
+            }
+        }
+    }
 
 
 }
