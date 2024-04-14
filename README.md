@@ -14,6 +14,8 @@
 >- [x] [CALayer](#7)
 >- [x] [Networking](#8)
 >- [ ] [ChatApp](#9)
+>- [x] [MVC](#10)
+>- [x] [MVVM](#11)
 
 
 <a name="1"></a>
@@ -49,4 +51,9 @@
 ![README](https://github.com/mrgsdev/Swiftbook/assets/157994617/cdc9294a-a228-4b88-9fd0-f344c3b3bd79)
 
 <a name="9"></a>
-## [ChatApp](https://github.com/mrgsdev/Swiftbook/tree/main/ChatApp)  
+## [ChatApp](https://github.com/mrgsdev/Swiftbook/tree/main/ChatApp)
+
+<a name="10"></a>
+## [MVC](https://github.com/mrgsdev/Swiftbook/tree/main/MVC)
+<a name="9"></a>
+## [MVVM](https://github.com/mrgsdev/Swiftbook/tree/main/MVVM)
